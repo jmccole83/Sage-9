@@ -136,6 +136,15 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
+        'mwdelaney/sage-advanced-custom-fields' => array(
+            'pretty_version' => '1.6',
+            'version' => '1.6.0.0',
+            'reference' => '96d21294fa1bbb090a1c8b8ae39f8dcf018d61cd',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../mwdelaney/sage-advanced-custom-fields',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'nesbot/carbon' => array(
             'pretty_version' => '1.25.3',
             'version' => '1.25.3.0',

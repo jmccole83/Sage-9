@@ -9,10 +9,15 @@
   SupportsAnchor: true
   SupportsAlign: wide center full
   SupportsInnerBlocks: true
-  SupportsFullHeight: true
 --}}
 
-<div data-{{ $block['id'] }} class="{{ $block['classes'] }} custom-block">
+@php
+
+  $fh = get_field('full_height');
+
+@endphp
+
+<div data-{{ $block['id'] }} class="{{ $block['classes'] }} custom-block @if($fh) has-full-height @endif my-0">
     <div class="container">
       <InnerBlocks />
     </div>
@@ -20,9 +25,6 @@
 
 <style>
   .video-background {
-    max-width: 100vw;
     padding: 5rem 0;
-    margin-top: 0;
-    margin-bottom: 0;
   }
 </style>

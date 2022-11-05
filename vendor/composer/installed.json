@@ -945,6 +945,55 @@
             "install-path": "../mwdelaney/sage-acf-gutenberg-blocks"
         },
         {
+            "name": "mwdelaney/sage-advanced-custom-fields",
+            "version": "1.6",
+            "version_normalized": "1.6.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/MWDelaney/sage-advanced-custom-fields.git",
+                "reference": "96d21294fa1bbb090a1c8b8ae39f8dcf018d61cd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/MWDelaney/sage-advanced-custom-fields/zipball/96d21294fa1bbb090a1c8b8ae39f8dcf018d61cd",
+                "reference": "96d21294fa1bbb090a1c8b8ae39f8dcf018d61cd",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2"
+            },
+            "time": "2021-02-01T16:02:34+00:00",
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "files": [
+                    "advanced-custom-fields.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Michael W. Delaney",
+                    "email": "michael@michaeldelaney.me"
+                }
+            ],
+            "description": "Advanced Custom Fields local JSON setup for Sage 9 based themes",
+            "homepage": "https://github.com/MWDelaney/sage-advanced-custom-fields",
+            "keywords": [
+                "advanced custom fields",
+                "json",
+                "wordpress"
+            ],
+            "support": {
+                "issues": "https://github.com/MWDelaney/sage-advanced-custom-fields/issues",
+                "source": "https://github.com/MWDelaney/sage-advanced-custom-fields/tree/1.6"
+            },
+            "install-path": "../mwdelaney/sage-advanced-custom-fields"
+        },
+        {
             "name": "nesbot/carbon",
             "version": "1.25.3",
             "version_normalized": "1.25.3.0",
