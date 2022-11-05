@@ -6,6 +6,16 @@ namespace App;
 add_action( 'after_setup_theme', function () {
     // Add extra Gutenberg alignment
     add_theme_support( 'align-wide' );
+    // Disable custom font sizes
+    add_theme_support( 'disable-custom-font-sizes' );
+    // Add custom line height
+    add_theme_support( 'custom-line-height' );
+    // Add responsive embeds support
+    add_theme_support( 'responsive-embeds' );
+    // Add custom padding
+    add_theme_support( 'custom-spacing' );
+    // Add appearance tools
+    add_theme_support( 'appearance-tools' );
 } );
 
 // Font sizes in Gutenberg
