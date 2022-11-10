@@ -78,3 +78,33 @@ add_theme_support(
         )
     )
 );
+
+// Rename posts in the admin menu
+add_action( 'admin_menu', function() {
+   global $menu;
+   global $submenu;
+   $submenu['edit.php'][5][0] = 'Projects';
+   $submenu['edit.php'][10][0] = 'Add Projects';
+   $submenu['edit.php'][16][0] = 'Projects Tags';
+   $menu[5][0] = 'Projects';
+}  );
+
+
+// Rename the buttons/labels in the Post section
+add_action( 'init', function() {
+   global $wp_post_types;
+   $labels = &$wp_post_types['post']->labels;
+   $labels->name = 'Projects';
+   $labels->singular_name = 'Project';
+   $labels->add_new = 'Add Projects';
+   $labels->add_new_item = 'Add Projects';
+   $labels->edit_item = 'Edit Projects';
+   $labels->new_item = 'Projects';
+   $labels->view_item = 'View Projects';
+   $labels->search_items = 'Search Projects';
+   $labels->not_found = 'No Projects found';
+   $labels->not_found_in_trash = 'No Projects found in Trash';
+   $labels->all_items = 'All Projects';
+   $labels->menu_name = 'Projects';
+   $labels->name_admin_bar = 'Projects';
+}  );
