@@ -5,57 +5,66 @@ namespace App;
 add_action( 'init', function () {
   // custom post types go here
 
-  // Projects
-  // $labels = array(
-  //   'name'            => __( 'Projects', '' ),
-  //   'all_items'       => __( 'Projects', '' ),
-  //   'singular_name'   => __( 'Project', '' ),
-  //   'add_new'         => __( 'Add Project', '' ),
-  //   'add_new_item'    => __( 'Add Project', '' ),
-  // );
-  //
-  // $args = array(
-  //   'label'                 => __( 'Projects', '' ),
-  //   'labels'                => $labels,
-  //   'description'           => 'Project post type',
-  //   'supports'              => array( 'title', 'revisions', 'thumbnail' ),
-  //   'public'                => false,
-  //   'show_ui'               => true,
-  //   'show_in_rest'          => true,
-  //   'rest_base'             => '',
-  //   'has_archive'           => true,
-  //   'show_in_menu'          => true,
-  //   'menu_icon'             => 'dashicons-location-alt',
-  //   'exclude_from_search'   => false,
-  //   'capability_type'       => 'post',
-  //   'map_meta_cap'          => true,
-  //   'hierarchical'          => false,
-  // );
-  // // rename to projects
-  // register_post_type( 'projects', $args );
-  //
-  // // register project categories
-  // $args = array(
-  //   'hierarchical'      => true,
-  //   'labels'            => array(
-  //   'name'              => __( 'Project category', '' ),
-  //   'singular_name'     => __( 'Project category', '' ),
-  //   'add_new'           => __( 'Add Project category', '' ),
-  //   'add_new_item'      => __( 'Add Project category', '' ),
-  //   ),
-  //   'capabilities'      => array(
-  //     //'manage_terms' => '',
-  //     //'edit_terms' => '',
-  //     //'delete_terms' => '',
-  //     'assign_terms'    => 'edit_posts'
-  //   ),
-  //   'public'            => true,
-  //   'show_ui'           => true,
-  //   'show_admin_column' => true,
-  //   'query_var'         => true,
-  //   'show_in_rest'      => true,
-  // );
-  // register_taxonomy( 'project-category', array( 'projects' ), $args );
+  // Get Custom Post Type repeater field
+  $cpts = get_field('cpts', 'option');
 
+  if($cpts):
+  foreach($cpts as $cpt) {
+    $labels = array(
+      'name'            => __( $cpt['post_type_name'], '' ),
+      'all_items'       => __( $cpt['post_type_name'], '' ),
+      'singular_name'   => __( $cpt['singular_name'], '' ),
+      'add_new'         => __( 'Add New '.$cpt['singular_name'], '' ),
+      'add_new_item'    => __( 'Add New '.$cpt['singular_name'], '' ),
+    );
+
+    $args = array(
+      'label'                 => __( $cpt['post_type_name'], '' ),
+      'labels'                => $labels,
+      'description'           => $cpt['post_type_name'].' post type',
+      'supports'              => array( 'title', 'editor', 'revisions', 'trackbacks', 'author', 'excerpt', 'thumbnail' ),
+      'public'                => $cpt['public'],
+      'show_ui'               => $cpt['show_ui'],
+      'show_in_rest'          => $cpt['show_in_rest'],
+      'rest_base'             => '',
+      'has_archive'           => $cpt['has_archive'],
+      'menu_icon'             => $cpt['dash_icon'],
+      'exclude_from_search'   => $cpt['exclude_from_search'],
+      'capability_type'       => 'post',
+      'map_meta_cap'          => true,
+      'hierarchical'          => $cpt['hierarchical'],
+    );
+    // register and rename
+    register_post_type( strtolower($cpt['post_type_name']), $args );
+
+
+    // register taxonomies
+    if($cpt['custom_taxonomies']):
+    foreach($cpt['custom_taxonomies'] as $tax) {
+      $args = array(
+        'hierarchical'      => true,
+        'labels'            => array(
+        'name'              => __( $tax['taxonomy_name'], '' ),
+        'singular_name'     => __( $tax['taxonomy_name'], '' ),
+        'add_new'           => __( $tax['taxonomy_name'], '' ),
+        'add_new_item'      => __( $tax['taxonomy_name'], '' ),
+        ),
+        'capabilities'      => array(
+          'manage_terms'    => 'manage_categories',
+          'edit_terms'      => 'manage_categories',
+          'delete_terms'    => 'manage_categories',
+          'assign_terms'    => 'edit_posts'
+        ),
+        'public'            => true,
+        'show_ui'           => true,
+        'show_admin_column' => true,
+        'query_var'         => true,
+        'show_in_rest'      => true,
+      );
+      register_taxonomy( strtolower($tax['taxonomy_name']), array( strtolower($cpt['post_type_name']) ), $args );
+    }
+    endif;
+  }
+  endif;
 
 });

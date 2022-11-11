@@ -108,3 +108,19 @@ add_action( 'init', function() {
    $labels->menu_name = 'Projects';
    $labels->name_admin_bar = 'Projects';
 }  );
+
+// ACF Pro Options Page(s)
+// Option page to add Custom Post Types
+if( function_exists('acf_add_options_page') ) {
+
+	$option_page = acf_add_options_page(array(
+    'page_title' 	=> 'Custom Post Types Manager',
+    'menu_title' 	=> 'Custom Post Types Manager',
+    'menu_slug' 	=> 'custom-post-types',
+    'capability' 	=> 'edit_posts',
+    'icon_url'    => 'dashicons-welcome-widgets-menus',
+    'redirect'    => false,
+    'position'    => 2,
+	));
+
+}
