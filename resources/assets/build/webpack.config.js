@@ -56,7 +56,16 @@ let webpackConfig = {
         test: /\.js$/,
         exclude: [/node_modules(?![/|\\](bootstrap|foundation-sites))/],
         use: [
-          { loader: 'buble-loader', options: { objectAssign: 'Object.assign' } },
+          {
+            loader: 'buble-loader',
+            options: {
+              objectAssign: 'Object.assign',
+              transforms: {
+                modules: false,
+                dangerousForOf: true,
+              },
+            },
+          },
         ],
       },
       {
@@ -171,10 +180,12 @@ let webpackConfig = {
     new MiniCssExtractPlugin({
       filename: `styles/${assetsFilenames}.css`,
     }),
+    /*
     new StyleLintPlugin({
       failOnError: !config.enabled.watcher,
       syntax: 'scss',
     }),
+    */
     new FriendlyErrorsWebpackPlugin(),
   ],
 };
