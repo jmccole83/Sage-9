@@ -91,6 +91,7 @@ if( function_exists('acf_add_options_page') ) {
     'icon_url'    => 'dashicons-welcome-view-site',
     'redirect'    => false,
     'position'    => 2,
+    'capability'  => 'mange_options'
 	));
 
   $option_page = acf_add_options_page(array(
@@ -101,6 +102,7 @@ if( function_exists('acf_add_options_page') ) {
     'icon_url'    => 'dashicons-admin-generic',
     'redirect'    => false,
     'position'    => 3,
+    'capability'  => 'mange_options'
 	));
 
 	$option_page = acf_add_options_page(array(
@@ -111,6 +113,7 @@ if( function_exists('acf_add_options_page') ) {
     'icon_url'    => 'dashicons-welcome-widgets-menus',
     'redirect'    => false,
     'position'    => 4,
+    'capability'  => 'mange_options'
 	));
 
 }
