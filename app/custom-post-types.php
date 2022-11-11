@@ -10,6 +10,9 @@ add_action( 'init', function () {
 
   if($cpts):
   foreach($cpts as $cpt) {
+
+    $sanitized_post = sanitize_title_with_dashes($cpt['post_type_name']);
+
     $labels = array(
       'name'            => __( $cpt['post_type_name'], '' ),
       'all_items'       => __( $cpt['post_type_name'], '' ),
@@ -34,13 +37,16 @@ add_action( 'init', function () {
       'map_meta_cap'          => true,
       'hierarchical'          => $cpt['hierarchical'],
     );
-    // register and rename
-    register_post_type( strtolower($cpt['post_type_name']), $args );
 
+    // register and rename
+    register_post_type( $sanitized_post, $args );
 
     // register taxonomies
     if($cpt['custom_taxonomies']):
     foreach($cpt['custom_taxonomies'] as $tax) {
+
+      $sanitized_tax = sanitize_title_with_dashes($tax['taxonomy_name']);
+
       $args = array(
         'hierarchical'      => true,
         'labels'            => array(
@@ -61,7 +67,7 @@ add_action( 'init', function () {
         'query_var'         => true,
         'show_in_rest'      => true,
       );
-      register_taxonomy( strtolower($tax['taxonomy_name']), array( strtolower($cpt['post_type_name']) ), $args );
+      register_taxonomy( $sanitized_tax, array( $sanitized_post ), $args );
     }
     endif;
   }
