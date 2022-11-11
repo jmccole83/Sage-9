@@ -77,8 +77,10 @@
     "yargs": "^17.0.1"
   },
   "dependencies": {
+    "@popperjs/core": "^2.11.6",
+    "animate.css": "^4.1.1",
     "bootstrap": "^5.2.2",
-    "jquery": "^3.3.1",
-    "@popperjs/core": "^2.11.6"
+    "hamburgers": "^1.2.1",
+    "jquery": "^3.3.1"
   }
 }

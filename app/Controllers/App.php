@@ -30,6 +30,16 @@ class App extends Controller
         }
         return get_the_title();
     }
+
+    // Hamburger Style
+    public function hamburger_style() {
+      return get_field('hamburger_style', 'option');
+    }
+
+    // Hamburger Breakpoint
+    public function hamburger_breakpoint() {
+      return get_field('hamburger_breakpoint', 'option');
+    }
 }
 
 // Rename posts in the admin menu

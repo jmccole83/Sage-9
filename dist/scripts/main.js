@@ -8810,9 +8810,22 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
+/* provided dependency */ var $ = __webpack_require__(/*! jquery */ "jquery");
 /* harmony default export */ __webpack_exports__["default"] = ({
   init: function init() {
     // JavaScript to be fired on all pages
+
+    // Set offCanvas section
+    var offCanvas = document.getElementById('offcanvasNavbar');
+
+    // Show offCanvas
+    offCanvas.addEventListener('show.bs.offcanvas', function () {
+      $('.hamburger').addClass('is-active');
+    });
+    // Hide offCanvas
+    offCanvas.addEventListener('hide.bs.offcanvas', function () {
+      $('.hamburger').removeClass('is-active');
+    });
   },
   finalize: function finalize() {
     // JavaScript to be fired on all pages, after page specific JS is fired

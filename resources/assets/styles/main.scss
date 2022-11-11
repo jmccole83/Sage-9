@@ -11,6 +11,9 @@
  */
 // @import "~some-node-module";
 
+@import "~hamburgers/_sass/hamburgers/hamburgers";
+@import "~animate.css/animate.css";
+
 /** Import theme styles */
 @import "common/global";
 @import "common/typography";
