@@ -31,3 +31,45 @@ class App extends Controller
         return get_the_title();
     }
 }
+
+// Rename posts in the admin menu
+if( function_exists('acf_add_options_page') ) {
+
+  $rename = get_field('rename_posts', 'option');
+
+  if($rename) {
+
+    add_action( 'admin_menu', function() {
+      $new_name = get_field('posts_new_name', 'option');
+      $singular_name = get_field('post_singular_name', 'option');
+      global $menu;
+      global $submenu;
+      $submenu['edit.php'][5][0]   = $new_name;
+      $submenu['edit.php'][10][0]  = 'Add new '.$singular_name;
+      $submenu['edit.php'][16][0]  = 'Tags';
+      $menu[5][0]                  = $new_name;
+    }  );
+
+
+    // Rename the buttons/labels in the Post section
+    add_action( 'init', function() {
+      $new_name = get_field('posts_new_name', 'option');
+      $singular_name = get_field('post_singular_name', 'option');
+      global $wp_post_types;
+      $labels                      = &$wp_post_types['post']->labels;
+      $labels->name                = $new_name;
+      $labels->singular_name       = $singular_name;
+      $labels->add_new             = 'Add '.$singular_name;
+      $labels->add_new_item        = 'Add '.$singular_name;
+      $labels->edit_item           = 'Edit '.$singular_name;
+      $labels->new_item            = $singular_name;
+      $labels->view_item           = 'View '.$new_name;
+      $labels->search_items        = 'Search '.$new_name;
+      $labels->not_found           = 'No '.$new_name.' found';
+      $labels->not_found_in_trash  = 'No '.$new_name.' found in Trash';
+      $labels->all_items           = 'All '.$new_name;
+      $labels->menu_name           = $new_name;
+      $labels->name_admin_bar      = $new_name;
+    }  );
+  }
+}
