@@ -14,7 +14,7 @@
 </div>
 
 {{-- Main header --}}
-<header class="banner">
+<header class="banner {!! $header_style !!}">
   <div class="container d-flex align-items-center justify-content-between">
     <a class="brand" href="{{ home_url('/') }}">{{ get_bloginfo('name', 'display') }}</a>
     <nav class="nav-primary d-flex align-items-center justify-content-end">

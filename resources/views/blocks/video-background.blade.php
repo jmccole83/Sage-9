@@ -17,7 +17,7 @@
 
 @endphp
 
-<div data-{{ $block['id'] }} class="{{ $block['classes'] }} custom-block @if($fh) has-full-height @endif my-0">
+<div data-{{ $block['id'] }} class="{{ $block['classes'] }} custom-block d-flex align-items-center @if($fh) has-full-height @endif my-0">
     <div class="container">
       <InnerBlocks />
     </div>

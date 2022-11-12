@@ -3,6 +3,52 @@
     "title": "Developer Settings",
     "fields": [
         {
+            "key": "field_636eedb30b174",
+            "label": "Header Style",
+            "name": "",
+            "aria-label": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 1,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_636eedcd0b175",
+            "label": "Header Style",
+            "name": "header_style",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "position-static": "Regular",
+                "position-fixed w-100": "Fixed",
+                "position-absolute w-100": "Absolute",
+                "sticky-top": "Sticky"
+            },
+            "default_value": "position-static",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 1,
+            "ajax": 1,
+            "placeholder": ""
+        },
+        {
             "key": "field_636ebb2413e07",
             "label": "Navigation UI",
             "name": "",
@@ -16,7 +62,7 @@
                 "class": "",
                 "id": ""
             },
-            "open": 1,
+            "open": 0,
             "multi_expand": 0,
             "endpoint": 0
         },
@@ -227,5 +273,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1668206648
+    "modified": 1668214536
 }

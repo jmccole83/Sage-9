@@ -31,6 +31,11 @@ class App extends Controller
         return get_the_title();
     }
 
+    // Header Style
+    public function header_style() {
+      return get_field('header_style', 'option');
+    }
+
     // Hamburger Style
     public function hamburger_style() {
       return get_field('hamburger_style', 'option');
