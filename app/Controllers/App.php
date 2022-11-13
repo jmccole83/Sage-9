@@ -46,7 +46,6 @@ class App extends Controller
       return get_field('hamburger_breakpoint', 'option');
     }
 }
-
 // Rename posts in the admin menu
 if( function_exists('acf_add_options_page') ) {
 

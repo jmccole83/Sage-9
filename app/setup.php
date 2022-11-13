@@ -36,9 +36,6 @@ add_action('after_setup_theme', function () {
         'relative-urls'
     ]);
 
-    // Editor Color Palette
-  	add_theme_support( 'editor-color-palette', get_field('colours','options') );
-
     /**
      * Enable plugins to manage the document title
      * @link https://developer.wordpress.org/reference/functions/add_theme_support/#title-tag

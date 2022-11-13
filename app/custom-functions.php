@@ -4,18 +4,27 @@ namespace App;
 
 // Add after theme setup
 add_action( 'after_setup_theme', function () {
-    // Add extra Gutenberg alignment
-    add_theme_support( 'align-wide' );
-    // Disable custom font sizes
-    add_theme_support( 'disable-custom-font-sizes' );
-    // Add custom line height
-    add_theme_support( 'custom-line-height' );
-    // Add responsive embeds support
-    add_theme_support( 'responsive-embeds' );
-    // Add custom padding
-    add_theme_support( 'custom-spacing' );
-    // Add appearance tools
-    add_theme_support( 'appearance-tools' );
+  // Add extra Gutenberg alignment
+  add_theme_support( 'align-wide' );
+  // Disable custom font sizes
+  add_theme_support( 'disable-custom-font-sizes' );
+  // Add custom line height
+  add_theme_support( 'custom-line-height' );
+  // Add responsive embeds support
+  add_theme_support( 'responsive-embeds' );
+  // Add custom padding
+  add_theme_support( 'custom-spacing' );
+  // Add appearance tools
+  add_theme_support( 'appearance-tools' );
+  // Add custom colours to palette
+  $colours = get_field('colours', 'options');
+  foreach($colours as $col) {
+    $name     = esc_attr__($col['name'], 'default');
+    $slug     = sanitize_title_with_dashes($col['name']);
+    $colour   = $col['colour'];
+    $newColorPalette[] = array('name' => $name, 'slug' => $slug, 'color' => $colour);
+  }
+  add_theme_support( 'editor-color-palette', $newColorPalette );
 } );
 
 // Font sizes in Gutenberg
