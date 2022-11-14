@@ -2,8 +2,23 @@
 @import "~bootstrap/scss/functions";
 
 $theme-colors: (
-  primary: #525ddc
+  primary: #1c1b1b
 );
+
+// Brand colours
+$white: #efefef;
+$black: #1c1b1b;
+$green: #172627;
+
+$colours: (
+  white: $white,
+  black: $black,
+  green: $green,
+);
+
+// Font(s)
+$fa:           "Font Awesome 5 Pro";
+$font-primary: 'Lato', sans-serif;
 
 /** Bootstrap navbar fix (https://git.io/fADqW) */
 $navbar-dark-toggler-icon-bg: none;

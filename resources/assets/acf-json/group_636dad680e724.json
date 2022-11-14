@@ -3,11 +3,228 @@
     "title": "Theme Settings",
     "fields": [
         {
-            "key": "field_636eb9d069502",
-            "label": "Posts",
+            "key": "field_63718ac8ba59c",
+            "label": "Logos",
             "name": "",
             "aria-label": "",
             "type": "accordion",
+            "instructions": "Set main and alternate logos.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_63718adaba59d",
+            "label": "Logo",
+            "name": "logo",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_63718aedba59e",
+            "label": "Alternate Logo",
+            "name": "alt_logo",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_636eedb30b174",
+            "label": "Header Style",
+            "name": "",
+            "aria-label": "",
+            "type": "accordion",
+            "instructions": "Sets the website's header display and behavior.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_636eedcd0b175",
+            "label": "Header Style",
+            "name": "header_style",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "Select how the header is displayed.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "position-static": "Regular",
+                "position-fixed w-100": "Fixed",
+                "position-absolute w-100": "Absolute",
+                "sticky-top": "Sticky"
+            },
+            "default_value": "position-static",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 1,
+            "ajax": 1,
+            "placeholder": ""
+        },
+        {
+            "key": "field_636ebb6af6a53",
+            "label": "Hamburger Style",
+            "name": "hamburger_style",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "Preview options from here: <a href=\"https:\/\/jonsuh.com\/hamburgers\/\" target=\"_blank\">https:\/\/jonsuh.com\/hamburgers\/<\/a>",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "hamburger--3dx": "hamburger--3dx",
+                "hamburger--3dx-r": "hamburger--3dx-r",
+                "hamburger--3dy": "hamburger--3dy",
+                "hamburger--3dy-r": "hamburger--3dy-r",
+                "hamburger--3dxy": "hamburger--3dxy",
+                "hamburger--3dxy-r": "hamburger--3dxy-r",
+                "hamburger--arrow": "hamburger--arrow",
+                "hamburger--arrow-r": "hamburger--arrow-r",
+                "hamburger--arrowalt": "hamburger--arrowalt",
+                "hamburger--arrowalt-r": "hamburger--arrowalt-r",
+                "hamburger--arrowturn": "hamburger--arrowturn",
+                "hamburger--arrowturn-r": "hamburger--arrowturn-r",
+                "hamburger--boring": "hamburger--boring",
+                "hamburger--collapse": "hamburger--collapse",
+                "hamburger--collapse-r": "hamburger--collapse-r",
+                "hamburger--elastic": "hamburger--elastic",
+                "hamburger--elastic-r": "hamburger--elastic-r",
+                "hamburger--emphatic": "hamburger--emphatic",
+                "hamburger--emphatic-r": "hamburger--emphatic-r",
+                "hamburger--minus": "hamburger--minus",
+                "hamburger--slider": "hamburger--slider",
+                "hamburger--slider-r": "hamburger--slider-r",
+                "hamburger--spin": "hamburger--spin",
+                "hamburger--spin-r": "hamburger--spin-r",
+                "hamburger--spring": "hamburger--spring",
+                "hamburger--spring-r": "hamburger--spring-r",
+                "hamburger--stand": "hamburger--stand",
+                "hamburger--stand-r": "hamburger--stand-r",
+                "hamburger--squeeze": "hamburger--squeeze",
+                "hamburger--vortex": "hamburger--vortex",
+                "hamburger--vortex-r": "hamburger--vortex-r"
+            },
+            "default_value": "hamburger--boring",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 1,
+            "ajax": 1,
+            "placeholder": ""
+        },
+        {
+            "key": "field_636ec7cd267fa",
+            "label": "Hamburger Breakpoint",
+            "name": "hamburger_breakpoint",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "The breakpoint for showing\/hiding the hamburger icon.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "d-block": "Show On All",
+                "d-xl-block d-xxl-none": "Extra large",
+                "d-lg-block d-xl-none": "Large",
+                "d-md-block d-lg-none": "Medium",
+                "d-sm-block d-md-none": "Small",
+                "d-block d-sm-none": "X-Small"
+            },
+            "default_value": "d-block",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 1,
+            "ajax": 1,
+            "placeholder": ""
+        },
+        {
+            "key": "field_636ec580a3eb1",
+            "label": "Colours",
+            "name": "",
+            "aria-label": "",
+            "type": "accordion",
+            "instructions": "Allows Admins to setup all colours required for Blocks.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_636ec58ea3eb2",
+            "label": "Colours",
+            "name": "colours",
+            "aria-label": "",
+            "type": "repeater",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -16,7 +233,71 @@
                 "class": "",
                 "id": ""
             },
-            "open": 1,
+            "layout": "block",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "Add Row",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_636ec59ba3eb3",
+                    "label": "Name",
+                    "name": "name",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_636ec58ea3eb2"
+                },
+                {
+                    "key": "field_636ec5bba3eb5",
+                    "label": "Colour",
+                    "name": "colour",
+                    "aria-label": "",
+                    "type": "color_picker",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "enable_opacity": 0,
+                    "return_format": "string",
+                    "parent_repeater": "field_636ec58ea3eb2"
+                }
+            ]
+        },
+        {
+            "key": "field_636eb9d069502",
+            "label": "Posts",
+            "name": "",
+            "aria-label": "",
+            "type": "accordion",
+            "instructions": "Allows Admins to change the name of <em>Posts<\/em>. Purely cosmetic.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
             "multi_expand": 0,
             "endpoint": 0
         },
@@ -47,7 +328,7 @@
             "aria-label": "",
             "type": "text",
             "instructions": "",
-            "required": 0,
+            "required": 1,
             "conditional_logic": [
                 [
                     {
@@ -75,7 +356,7 @@
             "aria-label": "",
             "type": "text",
             "instructions": "",
-            "required": 0,
+            "required": 1,
             "conditional_logic": [
                 [
                     {
@@ -115,5 +396,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1668373682
+    "modified": 1668385917
 }

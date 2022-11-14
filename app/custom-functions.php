@@ -102,16 +102,6 @@ if( function_exists('acf_add_options_page') ) {
     'position'    => 2,
 	));
 
-  $option_page = acf_add_options_page(array(
-    'page_title' 	=> 'Developer Settings',
-    'menu_title' 	=> 'Developer Settings',
-    'menu_slug' 	=> 'developer-settings',
-    'capability' 	=> 'edit_posts',
-    'icon_url'    => 'dashicons-admin-generic',
-    'redirect'    => false,
-    'position'    => 3,
-	));
-
 	$option_page = acf_add_options_page(array(
     'page_title' 	=> 'Custom Post Type Manager',
     'menu_title' 	=> 'Custom Post Type Manager',
@@ -119,7 +109,17 @@ if( function_exists('acf_add_options_page') ) {
     'capability' 	=> 'edit_posts',
     'icon_url'    => 'dashicons-welcome-widgets-menus',
     'redirect'    => false,
-    'position'    => 4,
+    'position'    => 3,
 	));
+
+  // $option_page = acf_add_options_page(array(
+  //   'page_title' 	=> 'Developer Settings',
+  //   'menu_title' 	=> 'Developer Settings',
+  //   'menu_slug' 	=> 'developer-settings',
+  //   'capability' 	=> 'edit_posts',
+  //   'icon_url'    => 'dashicons-admin-generic',
+  //   'redirect'    => false,
+  //   'position'    => 4,
+	// ));
 
 }
