@@ -6,6 +6,16 @@ use Sober\Controller\Controller;
 
 class App extends Controller
 {
+    public function logo()
+    {
+      return get_field('logo', 'option');
+    }
+
+    public function alt_logo()
+    {
+      return get_field('alt_logo', 'option');
+    }
+
     public function siteName()
     {
         return get_bloginfo('name');
