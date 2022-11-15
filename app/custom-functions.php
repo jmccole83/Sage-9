@@ -32,56 +32,56 @@ add_theme_support(
     'editor-font-sizes',
     array(
       array(
-          'name'      => __( 'Small', 'your-theme-text-domain' ),
-          'shortName' => __( 'S', 'your-theme-text-domain' ),
+          'name'      => __( 'Small', 'sage' ),
+          'shortName' => __( 'S', 'sage' ),
           'size'      => 12,
           'slug'      => 'Small'
       ),
       array(
-          'name'      => __( 'Body', 'your-theme-text-domain' ),
-          'shortName' => __( 'R', 'your-theme-text-domain' ),
+          'name'      => __( 'Body', 'sage' ),
+          'shortName' => __( 'R', 'sage' ),
           'size'      => 16,
           'slug'      => 'body'
       ),
         array(
-            'name'      => __( 'H6', 'your-theme-text-domain' ),
-            'shortName' => __( 'H6', 'your-theme-text-domain' ),
+            'name'      => __( 'H6', 'sage' ),
+            'shortName' => __( 'H6', 'sage' ),
             'size'      => 20,
             'slug'      => 'h6'
         ),
         array(
-            'name'      => __( 'H5', 'your-theme-text-domain' ),
-            'shortName' => __( 'H5', 'your-theme-text-domain' ),
+            'name'      => __( 'H5', 'sage' ),
+            'shortName' => __( 'H5', 'sage' ),
             'size'      => 25,
             'slug'      => 'h5'
         ),
         array(
-            'name'      => __( 'H4', 'your-theme-text-domain' ),
-            'shortName' => __( 'H4', 'your-theme-text-domain' ),
+            'name'      => __( 'H4', 'sage' ),
+            'shortName' => __( 'H4', 'sage' ),
             'size'      => 31.25,
             'slug'      => 'h4'
         ),
         array(
-            'name'      => __( 'H3', 'your-theme-text-domain' ),
-            'shortName' => __( 'H3', 'your-theme-text-domain' ),
+            'name'      => __( 'H3', 'sage' ),
+            'shortName' => __( 'H3', 'sage' ),
             'size'      => 39.06,
             'slug'      => 'h3'
         ),
         array(
-            'name'      => __( 'H2', 'your-theme-text-domain' ),
-            'shortName' => __( 'H2', 'your-theme-text-domain' ),
+            'name'      => __( 'H2', 'sage' ),
+            'shortName' => __( 'H2', 'sage' ),
             'size'      => 48.83,
             'slug'      => 'h2'
         ),
         array(
-            'name'      => __( 'H1', 'your-theme-text-domain' ),
-            'shortName' => __( 'H1', 'your-theme-text-domain' ),
+            'name'      => __( 'H1', 'sage' ),
+            'shortName' => __( 'H1', 'sage' ),
             'size'      => 61.04,
             'slug'      => 'h1'
         ),
         array(
-            'name'      => __( 'Display', 'your-theme-text-domain' ),
-            'shortName' => __( 'Display', 'your-theme-text-domain' ),
+            'name'      => __( 'Display', 'sage' ),
+            'shortName' => __( 'Display', 'sage' ),
             'size'      => 76.29,
             'slug'      => 'display'
         )
