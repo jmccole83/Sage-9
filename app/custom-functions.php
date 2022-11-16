@@ -16,15 +16,6 @@ add_action( 'after_setup_theme', function () {
   add_theme_support( 'custom-spacing' );
   // Add appearance tools
   add_theme_support( 'appearance-tools' );
-  // Add custom colours to palette
-  $colours = get_field('colours', 'options');
-  foreach($colours as $col) {
-    $name     = esc_attr__($col['name'], 'default');
-    $slug     = sanitize_title_with_dashes($col['name']);
-    $colour   = $col['colour'];
-    $newColorPalette[] = array('name' => $name, 'slug' => $slug, 'color' => $colour);
-  }
-  add_theme_support( 'editor-color-palette', $newColorPalette );
 } );
 
 // Font sizes in Gutenberg
@@ -89,7 +80,6 @@ add_theme_support(
 );
 
 // ACF Pro Options Page(s)
-// Option page to add Custom Post Types
 if( function_exists('acf_add_options_page') ) {
 
   $option_page = acf_add_options_page(array(
@@ -112,14 +102,29 @@ if( function_exists('acf_add_options_page') ) {
     'position'    => 3,
 	));
 
-  // $option_page = acf_add_options_page(array(
-  //   'page_title' 	=> 'Developer Settings',
-  //   'menu_title' 	=> 'Developer Settings',
-  //   'menu_slug' 	=> 'developer-settings',
-  //   'capability' 	=> 'edit_posts',
-  //   'icon_url'    => 'dashicons-admin-generic',
-  //   'redirect'    => false,
-  //   'position'    => 4,
-	// ));
+  add_action( 'after_setup_theme', function () {
+    // Add custom colours to palette
+    $colours = get_field('colours', 'options');
+    foreach($colours as $col) {
+      $name     = esc_attr__($col['name'], 'default');
+      $slug     = sanitize_title_with_dashes($col['name']);
+      $colour   = $col['colour'];
+      $newColorPalette[] = array('name' => $name, 'slug' => $slug, 'color' => $colour);
+    }
+    add_theme_support( 'editor-color-palette', $newColorPalette );
+
+    // Enable Gutenberg in WooCommerce product
+    if ( class_exists( 'woocommerce' ) ) {
+      if( get_field('use_gutenberg', 'options') ):
+        add_filter( 'use_block_editor_for_post_type', function ( $can_edit, $post_type ) {
+
+            if ( $post_type == 'product' ) {
+                $can_edit = true;
+            }
+            return $can_edit;
+        }, 10, 2 );
+      endif;
+    }
+  });
 
 }
