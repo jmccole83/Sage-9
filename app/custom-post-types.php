@@ -15,17 +15,17 @@ add_action( 'init', function () {
     $sanitized_singular = sanitize_title_with_dashes($cpt['singular_name']);
 
     $labels = array(
-      'name'            => __( $cpt['post_type_name'], '' ),
-      'all_items'       => __( $cpt['post_type_name'], '' ),
-      'singular_name'   => __( $cpt['singular_name'], '' ),
-      'add_new'         => __( 'Add New '.$cpt['singular_name'], '' ),
-      'add_new_item'    => __( 'Add New '.$cpt['singular_name'], '' ),
+      'name'            => __( ucwords($cpt['post_type_name']), '' ),
+      'all_items'       => __( ucwords($cpt['post_type_name']), '' ),
+      'singular_name'   => __( ucwords($cpt['singular_name']), '' ),
+      'add_new'         => __( 'Add New '.ucwords($cpt['singular_name']), '' ),
+      'add_new_item'    => __( 'Add New '.ucwords($cpt['singular_name']), '' ),
     );
 
     $args = array(
-      'label'                 => __( $cpt['post_type_name'], '' ),
+      'label'                 => __( ucwords($cpt['post_type_name']), '' ),
       'labels'                => $labels,
-      'description'           => $cpt['post_type_name'].' post type',
+      'description'           => ucwords($cpt['post_type_name']).' post type',
       'supports'              => array( 'title', 'editor', 'revisions', 'trackbacks', 'author', 'excerpt', 'thumbnail' ),
       'public'                => $cpt['public'],
       'show_ui'               => $cpt['show_ui'],
@@ -46,10 +46,10 @@ add_action( 'init', function () {
     $args = array(
       'hierarchical'      => true,
       'labels'            => array(
-      'name'              => __( $cpt['singular_name'].' Categories', '' ),
-      'singular_name'     => __( $cpt['singular_name'].' Category', '' ),
-      'add_new'           => __( $cpt['singular_name'].' Category', '' ),
-      'add_new_item'      => __( $cpt['singular_name'].' Category', '' ),
+      'name'              => __( ucwords($cpt['singular_name']).' Categories', '' ),
+      'singular_name'     => __( ucwords($cpt['singular_name']).' Category', '' ),
+      'add_new'           => __( ucwords($cpt['singular_name']).' Category', '' ),
+      'add_new_item'      => __( ucwords($cpt['singular_name']).' Category', '' ),
       ),
       'capabilities'      => array(
         'manage_terms'    => 'manage_categories',
@@ -69,10 +69,10 @@ add_action( 'init', function () {
     $args = array(
       'hierarchical'      => true,
       'labels'            => array(
-      'name'              => __( $cpt['singular_name'].' Tags', '' ),
-      'singular_name'     => __( $cpt['singular_name'].' Tag', '' ),
-      'add_new'           => __( $cpt['singular_name'].' Tag', '' ),
-      'add_new_item'      => __( $cpt['singular_name'].' Tag', '' ),
+      'name'              => __( ucwords($cpt['singular_name']).' Tags', '' ),
+      'singular_name'     => __( ucwords($cpt['singular_name']).' Tag', '' ),
+      'add_new'           => __( ucwords($cpt['singular_name']).' Tag', '' ),
+      'add_new_item'      => __( ucwords($cpt['singular_name']).' Tag', '' ),
       ),
       'capabilities'      => array(
         'manage_terms'    => 'manage_categories',
@@ -98,10 +98,10 @@ add_action( 'init', function () {
       $args = array(
         'hierarchical'      => true,
         'labels'            => array(
-        'name'              => __( $tax['taxonomy_name'], '' ),
-        'singular_name'     => __( $tax['taxonomy_name'], '' ),
-        'add_new'           => __( $tax['taxonomy_name'], '' ),
-        'add_new_item'      => __( $tax['taxonomy_name'], '' ),
+        'name'              => __( ucwords($tax['taxonomy_name']), '' ),
+        'singular_name'     => __( ucwords($tax['taxonomy_name']), '' ),
+        'add_new'           => __( ucwords($tax['taxonomy_name']), '' ),
+        'add_new_item'      => __( ucwords($tax['taxonomy_name']), '' ),
         ),
         'capabilities'      => array(
           'manage_terms'    => 'manage_categories',
