@@ -8,7 +8,7 @@
             "name": "cpts",
             "aria-label": "",
             "type": "repeater",
-            "instructions": "Add, remove and customize Custom Post Types and their Taxonomies from here.\r\n\r\nRemember to re-save the <em>Permalinks<\/em> from <em>Settings<\/em> afterwards.",
+            "instructions": "Add, remove and customize Custom Post Types and their Taxonomies from here. Each new post type gets Categories and Tags by default.\r\n<br><br>\r\nRemember to re-save the <em>Permalinks<\/em> from <em>Settings<\/em> afterward.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -280,5 +280,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 1,
-    "modified": 1668392851
+    "modified": 1668829142
 }

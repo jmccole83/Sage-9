@@ -12,6 +12,7 @@ add_action( 'init', function () {
   foreach($cpts as $cpt) {
 
     $sanitized_post = sanitize_title_with_dashes($cpt['post_type_name']);
+    $sanitized_singular = sanitize_title_with_dashes($cpt['singular_name']);
 
     $labels = array(
       'name'            => __( $cpt['post_type_name'], '' ),
@@ -40,6 +41,53 @@ add_action( 'init', function () {
 
     // register and rename
     register_post_type( $sanitized_post, $args );
+
+    // register categories
+    $args = array(
+      'hierarchical'      => true,
+      'labels'            => array(
+      'name'              => __( $cpt['singular_name'].' Categories', '' ),
+      'singular_name'     => __( $cpt['singular_name'].' Category', '' ),
+      'add_new'           => __( $cpt['singular_name'].' Category', '' ),
+      'add_new_item'      => __( $cpt['singular_name'].' Category', '' ),
+      ),
+      'capabilities'      => array(
+        'manage_terms'    => 'manage_categories',
+        'edit_terms'      => 'manage_categories',
+        'delete_terms'    => 'manage_categories',
+        'assign_terms'    => 'edit_posts'
+      ),
+      'public'            => true,
+      'show_ui'           => true,
+      'show_admin_column' => true,
+      'query_var'         => true,
+      'show_in_rest'      => true,
+    );
+    register_taxonomy( $sanitized_singular.'-categories', array( $sanitized_post ), $args );
+
+    // register tags
+    $args = array(
+      'hierarchical'      => true,
+      'labels'            => array(
+      'name'              => __( $cpt['singular_name'].' Tags', '' ),
+      'singular_name'     => __( $cpt['singular_name'].' Tag', '' ),
+      'add_new'           => __( $cpt['singular_name'].' Tag', '' ),
+      'add_new_item'      => __( $cpt['singular_name'].' Tag', '' ),
+      ),
+      'capabilities'      => array(
+        'manage_terms'    => 'manage_categories',
+        'edit_terms'      => 'manage_categories',
+        'delete_terms'    => 'manage_categories',
+        'assign_terms'    => 'edit_posts'
+      ),
+      'public'            => true,
+      'show_ui'           => true,
+      'show_admin_column' => true,
+      'query_var'         => true,
+      'show_in_rest'      => true,
+    );
+    register_taxonomy( $sanitized_singular.'-tags', array( $sanitized_post ), $args );
+
 
     // register taxonomies
     if($cpt['custom_taxonomies']):
