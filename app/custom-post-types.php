@@ -26,7 +26,7 @@ add_action( 'init', function () {
       'label'                 => __( ucwords($cpt['post_type_name']), '' ),
       'labels'                => $labels,
       'description'           => ucwords($cpt['post_type_name']).' post type',
-      'supports'              => array( 'title', 'editor', 'revisions', 'trackbacks', 'author', 'excerpt', 'thumbnail' ),
+      'supports'              => array( 'title', 'editor', 'revisions', 'trackbacks', 'author', 'excerpt', 'thumbnail', 'page-attributes' ),
       'public'                => $cpt['public'],
       'show_ui'               => $cpt['show_ui'],
       'show_in_rest'          => $cpt['show_in_rest'],
