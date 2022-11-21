@@ -22,9 +22,3 @@
       <InnerBlocks />
     </div>
 </div>
-
-<style>
-  .video-background {
-    padding: 5rem 0;
-  }
-</style>
