@@ -18464,4 +18464,8 @@ body#tinymce {
   margin: 12px !important;
 }
 
+.video-background.has-full-height {
+  min-height: 100vh;
+}
+
 /*# sourceMappingURL=main.css.map*/
