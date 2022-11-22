@@ -13,6 +13,13 @@
   </div>
 </div>
 
+@if( class_exists( 'WooCommerce' ) )
+<a class="cart-contents basket" href="{!! wc_get_cart_url() !!}" title="{!! _e( 'View your shopping cart' ) !!}">
+  <span class="hidden-xs">{!! sprintf ( _n( '%d</span>' . ' <span class="item-count"> item</span>', '%d</span>' . ' <span class="item-count"> items</span>', WC()->cart->get_cart_contents_count() ), WC()->cart->get_cart_contents_count() ) !!} - </span>
+  <span class="basket-total">{!! WC()->cart->get_cart_total() !!}</span>
+</a>
+@endif
+
 {{-- Main header --}}
 <header class="banner {!! $header_style !!}">
   <div class="container d-flex align-items-center justify-content-between">

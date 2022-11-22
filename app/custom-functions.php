@@ -128,3 +128,15 @@ if( function_exists('acf_add_options_page') ) {
   });
 
 }
+
+// AJAX update cart totals
+add_filter( 'woocommerce_add_to_cart_fragments', function ( $fragments ) {
+    ob_start();
+    ?>
+<a class="cart-contents" href="<?php echo wc_get_cart_url(); ?>" title="<?php _e( 'View your shopping cart' ); ?>"><span class="hidden-xs"><?php echo sprintf (_n( '%d</span>' . ' <span class="item-count"> item</span>', '%d</span>' . ' <span class="item-count"> items</span>', WC()->cart->get_cart_contents_count() ), WC()->cart->get_cart_contents_count() ); ?> - </span><?php echo WC()->cart->get_cart_total(); ?></a>
+    <?php
+ 
+    $fragments['a.cart-contents'] = ob_get_clean();
+ 
+    return $fragments;
+} );
