@@ -80,7 +80,7 @@
                         "class": "",
                         "id": ""
                     },
-                    "default_value": "",
+                    "default_value": "dashicons-welcome-widgets-menus",
                     "maxlength": "",
                     "placeholder": "e.g. dashicons-welcome-widgets-menus",
                     "prepend": "",
@@ -280,5 +280,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 1,
-    "modified": 1668829142
+    "modified": 1669253653
 }

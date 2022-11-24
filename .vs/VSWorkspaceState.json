@@ -1,9 +1,11 @@
 {
   "ExpandedNodes": [
     "",
+    "\\app",
     "\\resources",
     "\\resources\\views",
-    "\\resources\\views\\blocks"
+    "\\resources\\views\\partials"
   ],
+  "SelectedNode": "\\app\\custom-post-types.php",
   "PreviewInSolutionExplorer": false
 }

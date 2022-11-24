@@ -9,7 +9,7 @@ add_action( 'after_setup_theme', function () {
   // Disable custom font sizes
   add_theme_support( 'disable-custom-font-sizes' );
   // Add custom line height
-  add_theme_support( 'custom-line-height' );
+  // add_theme_support( 'custom-line-height' );
   // Add responsive embeds support
   add_theme_support( 'responsive-embeds' );
   // Add custom padding
