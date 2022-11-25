@@ -71,6 +71,64 @@
             "preview_size": "medium"
         },
         {
+            "key": "field_6381204d294b0",
+            "label": "Custom Scripts & Links",
+            "name": "",
+            "aria-label": "",
+            "type": "accordion",
+            "instructions": "Insert custom JavaScript and CSS scripts\/links.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_6381205f294b1",
+            "label": "Header Scripts",
+            "name": "header_scripts",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "rows": "",
+            "placeholder": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_6381206d294b2",
+            "label": "Footer Scripts",
+            "name": "footer_scripts",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "rows": "",
+            "placeholder": "",
+            "new_lines": ""
+        },
+        {
             "key": "field_636eedb30b174",
             "label": "Header Style",
             "name": "",
@@ -434,5 +492,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1668605932
+    "modified": 1669406923
 }

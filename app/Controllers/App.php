@@ -41,6 +41,16 @@ class App extends Controller
         return get_the_title();
     }
 
+    // Header Scripts
+    public function header_scripts() {
+      return get_field('header_scripts', 'option');
+    }
+
+    // Footer Scripts
+    public function footer_scripts() {
+      return get_field('footer_scripts', 'option');
+    }
+
     // Header Style
     public function header_style() {
       return get_field('header_style', 'option');
