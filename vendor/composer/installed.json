@@ -1397,7 +1397,7 @@
                 "bin/sage"
             ],
             "type": "library",
-            "installation-source": "source",
+            "installation-source": "dist",
             "autoload": {
                 "psr-4": {
                     "Roots\\Sage\\Installer\\": "src/"

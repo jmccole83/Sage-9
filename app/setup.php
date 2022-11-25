@@ -36,7 +36,6 @@ add_action('after_setup_theme', function () {
         'relative-urls'
     ]);
 
-
     /**
      * Enable plugins to manage the document title
      * @link https://developer.wordpress.org/reference/functions/add_theme_support/#title-tag

@@ -3,12 +3,18 @@
   margin-left: calc(-85vw / 2 + 100% / 2);
   margin-right: calc(-85vw / 2 + 100% / 2);
 }
+
 .alignfull {
   margin-left: calc(-100vw / 2 + 100% / 2);
   margin-right: calc(-100vw / 2 + 100% / 2);
 }
-.wp-block-group__inner-container {
-  padding: 0 15px;
-  margin: 0 auto;
-  max-width: 1140px;
+
+.alignfull > .wp-block-group__inner-container,
+.alignwide > .wp-block-group__inner-container {
+  @extend .container;
+}
+
+// Remove margins
+.wp-block-columns {
+  @extend .m-0;
 }
