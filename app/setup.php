@@ -20,6 +20,13 @@ add_action('wp_enqueue_scripts', function () {
 }, 100);
 
 /**
+ * Gutenbeg Editor styles
+ */
+add_action('enqueue_block_editor_assets', function () {
+     wp_enqueue_style('sage/gutenberg.css', asset_path('styles/gutenberg.css'), false, null);
+});
+
+/**
  * Theme setup
  */
 add_action('after_setup_theme', function () {

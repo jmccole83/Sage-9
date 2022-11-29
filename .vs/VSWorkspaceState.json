@@ -4,8 +4,8 @@
     "\\app",
     "\\resources",
     "\\resources\\views",
-    "\\resources\\views\\partials"
+    "\\resources\\views\\layouts"
   ],
-  "SelectedNode": "\\app\\custom-functions.php",
+  "SelectedNode": "\\resources\\views\\layouts\\app.blade.php",
   "PreviewInSolutionExplorer": false
 }
