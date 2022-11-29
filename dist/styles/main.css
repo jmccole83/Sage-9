@@ -18464,6 +18464,9 @@ body#tinymce {
   margin: 12px !important;
 }
 
+.video-background {
+  background: grey;
+}
 .video-background.has-full-height {
   min-height: 100vh;
 }
