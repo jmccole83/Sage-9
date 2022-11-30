@@ -18460,6 +18460,15 @@ h1, .h1,
 }
 /** Captions */
 /** Text meant only for screen readers */
+.navbar-nav .menu-item.dropdown .dropdown-menu {
+  position: absolute;
+  left: 0;
+  top: 100%;
+}
+.navbar-nav .menu-item.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
 body#tinymce {
   margin: 12px !important;
 }
