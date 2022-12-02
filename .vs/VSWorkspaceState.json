@@ -1,13 +1,7 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\app",
-    "\\app\\Controllers",
-    "\\resources",
-    "\\resources\\assets",
-    "\\resources\\views",
-    "\\resources\\views\\partials"
+    ""
   ],
-  "SelectedNode": "\\app\\Controllers\\App.php",
+  "SelectedNode": "\\D:\\website\\app\\public\\wp-content\\themes\\jm-theme",
   "PreviewInSolutionExplorer": false
 }

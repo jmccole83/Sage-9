@@ -185,3 +185,33 @@ add_filter( 'woocommerce_add_to_cart_fragments', function ( $fragments ) {
  
     return $fragments;
 } );
+
+/*
+ * Allow svg files to be uploaded
+ */
+add_filter('upload_mimes', function ($mimes) {
+ 
+  if ( is_admin() ) {
+    $mimes['svg'] = 'image/svg+xml';
+  }
+ 
+  return $mimes;
+ 
+});
+ 
+add_filter('wp_check_filetype_and_ext', function($data, $file, $filename, $mimes) {
+ 
+  if ( is_admin() ) {
+    $filetype = wp_check_filetype( $filename, $mimes);
+ 
+    return [
+      'ext'             => $filetype['ext'],
+      'type'            =>  $filetype['type'],
+      'proper_filename' => $data['proper_filename']
+    ];
+ 
+  } else {
+    return $data;
+  }
+ 
+}, 10, 4);

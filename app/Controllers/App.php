@@ -11,11 +11,34 @@ class App extends Controller
      * @return array
      */
     public function primarymenu() {
-      $args = array(
-        'theme_location'        => 'primary_navigation',
-        'menu_class'              => 'navbar-nav',
-        'walker'                        => new \App\wp_bootstrap4_navwalker(),
-      );
+        $hamburger_bp = get_field('hamburger_breakpoint', 'option');
+        $menu_bp = ' ';
+        switch($hamburger_bp) {
+            case 'd-block':
+                $menu_bp = 'd-none';
+                break;
+            case 'd-xl-block d-xxl-none':
+                $menu_bp = 'd-none d-xxl-block';
+                break;
+            case 'd-lg-block d-xl-none':
+                $menu_bp = 'd-none d-xl-block';
+                break;
+            case 'd-md-block d-lg-none':
+                $menu_bp = 'd-none d-lg-block';
+                break;
+            case 'd-sm-block d-md-none':
+                $menu_bp = 'd-none d-md-block';
+                break;
+            case 'd-block d-sm-none':
+                $menu_bp = 'd-none d-sm-block';
+                break;
+        }
+        $args = array(
+            'theme_location'        => 'primary_navigation',
+            'menu_class'              => 'navbar-nav',
+            'container_class'       => $menu_bp,
+            'walker'                        => new \App\wp_bootstrap4_navwalker(),
+        );
       return $args;
     }
 

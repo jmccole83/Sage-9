@@ -21,15 +21,12 @@
 @endif
 
 {{-- Main header --}}
-<header class="banner {!! $header_style !!}">
+<header class="banner py-4 {!! $header_style !!}">
   <div class="container d-flex align-items-center justify-content-between">
-    <a class="brand" href="{{ home_url('/') }}">{{ get_bloginfo('name', 'display') }}</a>
+    <a class="brand p-4 p-lg-5" href="{{ home_url('/') }}" style="background: url({!! $logo['url'] !!});">
+      <span class="visually-hidden">{{ get_bloginfo('name', 'display') }}</span>
+    </a>
     <nav class="nav-primary d-flex align-items-center justify-content-end">
-      {{--
-      @if (has_nav_menu('primary_navigation'))
-        {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav']) !!}
-      @endif
-      --}}
       @if (has_nav_menu('primary_navigation'))
         {!! wp_nav_menu($primarymenu) !!}
       @endif
