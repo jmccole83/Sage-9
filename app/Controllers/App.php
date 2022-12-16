@@ -14,29 +14,29 @@ class App extends Controller
         $hamburger_bp = get_field('hamburger_breakpoint', 'option');
         $menu_bp = ' ';
         switch($hamburger_bp) {
-            case 'd-block':
+            case 'd-flex':
                 $menu_bp = 'd-none';
                 break;
-            case 'd-xl-block d-xxl-none':
-                $menu_bp = 'd-none d-xxl-block';
+            case 'd-xl-flex d-xxl-none':
+                $menu_bp = 'd-none d-xxl-flex';
                 break;
-            case 'd-lg-block d-xl-none':
-                $menu_bp = 'd-none d-xl-block';
+            case 'd-lg-flex d-xl-none':
+                $menu_bp = 'd-none d-xl-flex';
                 break;
-            case 'd-md-block d-lg-none':
-                $menu_bp = 'd-none d-lg-block';
+            case 'd-md-flex d-lg-none':
+                $menu_bp = 'd-none d-lg-flex';
                 break;
-            case 'd-sm-block d-md-none':
-                $menu_bp = 'd-none d-md-block';
+            case 'd-sm-flex d-md-none':
+                $menu_bp = 'd-none d-md-flex';
                 break;
-            case 'd-block d-sm-none':
-                $menu_bp = 'd-none d-sm-block';
+            case 'd-flex d-sm-none':
+                $menu_bp = 'd-none d-sm-flex';
                 break;
         }
         $args = array(
-            'theme_location'        => 'primary_navigation',
-            'menu_class'              => 'navbar-nav',
-            'container_class'       => $menu_bp,
+            'theme_location'         => 'primary_navigation',
+            'menu_class'               => 'navbar-nav',
+            'container_class'        => $menu_bp,
             'walker'                        => new \App\wp_bootstrap4_navwalker(),
         );
       return $args;

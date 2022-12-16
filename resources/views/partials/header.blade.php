@@ -30,7 +30,7 @@
       @if (has_nav_menu('primary_navigation'))
         {!! wp_nav_menu($primarymenu) !!}
       @endif
-      <button class="navbar-toggler hamburger {!! $hamburger_style !!} {!! $hamburger_breakpoint !!}" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+      <button class="navbar-toggler hamburger p-0 {!! $hamburger_style !!} {!! $hamburger_breakpoint !!} " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
         <span class="hamburger-box">
           <span class="hamburger-inner"></span>
         </span>
