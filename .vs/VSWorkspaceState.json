@@ -2,10 +2,11 @@
   "ExpandedNodes": [
     "",
     "\\app",
+    "\\app\\Controllers",
     "\\resources",
     "\\resources\\views",
-    "\\resources\\views\\layouts"
+    "\\resources\\views\\partials"
   ],
-  "SelectedNode": "\\resources\\views\\layouts\\app.blade.php",
+  "SelectedNode": "\\app\\custom-functions.php",
   "PreviewInSolutionExplorer": false
 }

@@ -244,12 +244,12 @@
                 "id": ""
             },
             "choices": {
-                "d-block": "Show On All",
-                "d-xl-block d-xxl-none": "Extra large",
-                "d-lg-block d-xl-none": "Large",
-                "d-md-block d-lg-none": "Medium",
-                "d-sm-block d-md-none": "Small",
-                "d-block d-sm-none": "X-Small"
+                "d-flex": "Show On All",
+                "d-xl-flex d-xxl-none": "Extra large",
+                "d-lg-flex d-xl-none": "Large",
+                "d-md-flex d-lg-none": "Medium",
+                "d-sm-flex d-md-none": "Small",
+                "d-flex d-sm-none": "X-Small"
             },
             "default_value": "d-block",
             "return_format": "value",
@@ -492,5 +492,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1669406923
+    "modified": 1669949206
 }

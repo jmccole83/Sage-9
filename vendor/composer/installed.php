@@ -3,7 +3,7 @@
         'name' => 'roots/sage',
         'pretty_version' => 'dev-develop',
         'version' => 'dev-develop',
-        'reference' => '43cb24b866d10c53783dd3ee63a7cb1cb2a768e4',
+        'reference' => '866eb4d67ae6df08a183ec0e4c9abfcad1772b89',
         'type' => 'wordpress-theme',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -145,6 +145,15 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
+        'mwdelaney/sage-bootstrap4-navwalker' => array(
+            'pretty_version' => '1.7',
+            'version' => '1.7.0.0',
+            'reference' => '3a198858899980276bcba3dbf9bbdaf2c5d6837f',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../mwdelaney/sage-bootstrap4-navwalker',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'nesbot/carbon' => array(
             'pretty_version' => '1.25.3',
             'version' => '1.25.3.0',
@@ -214,7 +223,7 @@
         'roots/sage' => array(
             'pretty_version' => 'dev-develop',
             'version' => 'dev-develop',
-            'reference' => '43cb24b866d10c53783dd3ee63a7cb1cb2a768e4',
+            'reference' => '866eb4d67ae6df08a183ec0e4c9abfcad1772b89',
             'type' => 'wordpress-theme',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

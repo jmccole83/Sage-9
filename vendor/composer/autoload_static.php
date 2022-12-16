@@ -15,6 +15,7 @@ class ComposerStaticInit635027a7838a1a57fc2841de45f48116
         'e39a8b23c42d4e1452234d762b03835a' => __DIR__ . '/..' . '/ramsey/uuid/src/functions.php',
         'c2c8b4c3b32bcfd3011957f0fdd9f363' => __DIR__ . '/..' . '/mwdelaney/sage-acf-gutenberg-blocks/sage-acf-gutenberg-blocks.php',
         'd28648b76004e764787e236ee0ff5a66' => __DIR__ . '/..' . '/mwdelaney/sage-advanced-custom-fields/advanced-custom-fields.php',
+        'beda72a3bff40d61ed819c75025fda66' => __DIR__ . '/..' . '/mwdelaney/sage-bootstrap4-navwalker/bootstrap4-navwalker.php',
         'b50336562d531777993d90ca775abd88' => __DIR__ . '/..' . '/soberwp/controller/controller.php',
     );
 
