@@ -35,9 +35,9 @@ class App extends Controller
         }
         $args = array(
             'theme_location'         => 'primary_navigation',
-            'menu_class'               => 'navbar-nav',
+            'menu_class'             => 'navbar-nav',
             'container_class'        => $menu_bp,
-            'walker'                        => new \App\wp_bootstrap4_navwalker(),
+            'walker'                 => new \App\wp_bootstrap4_navwalker(),
         );
       return $args;
     }

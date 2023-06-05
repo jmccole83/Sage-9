@@ -79,6 +79,27 @@ add_theme_support(
     )
 );
 
+/*
+ * Wrap iframe and embed in div
+ */
+add_filter('the_content', function ($content) {
+   // match any iframes
+   $pattern = '~<iframe.*</iframe>|<embed.*</embed>~';
+   preg_match_all($pattern, $content, $matches);
+
+   foreach ($matches[0] as $match) {
+       // wrap matched iframe with div
+       $wrappedframe = '<div class="ratio 16x9">' . $match . '</div>';
+
+       //replace original iframe with new in content
+       $content = str_replace($match, $wrappedframe, $content);
+   }
+
+   return $content;
+  }
+);
+
+
 // Rename posts in the admin menu
 add_action('init', function() {
     if( function_exists('acf_add_options_page') ) {
@@ -151,7 +172,7 @@ if( function_exists('acf_add_options_page') ) {
     // Add custom colours to palette
     $colours = get_field('colours', 'options');
     foreach($colours as $col) {
-      $name     = esc_attr__($col['name'], 'default');
+      $name     = esc_attr__($col['name'], 'sage');
       $slug     = sanitize_title_with_dashes($col['name']);
       $colour   = $col['colour'];
       $newColorPalette[] = array('name' => $name, 'slug' => $slug, 'color' => $colour);
@@ -206,7 +227,7 @@ add_filter('wp_check_filetype_and_ext', function($data, $file, $filename, $mimes
  
     return [
       'ext'             => $filetype['ext'],
-      'type'            =>  $filetype['type'],
+      'type'            => $filetype['type'],
       'proper_filename' => $data['proper_filename']
     ];
  
@@ -215,3 +236,41 @@ add_filter('wp_check_filetype_and_ext', function($data, $file, $filename, $mimes
   }
  
 }, 10, 4);
+
+// Enqueue AJAX
+add_action( 'wp_enqueue_scripts', function() {
+  // Enqueue the script with the AJAX function.
+  wp_enqueue_script( 'my-ajax-script', get_template_directory_uri() . '/load-more/load-more.js', array( 'jquery' ), '1.0', true );
+
+  // Localize the script with the AJAX URL.
+  wp_localize_script( 'my-ajax-script', 'myAjax', array(
+    'ajax_url' => admin_url( 'admin-ajax.php' )
+  ));
+} );
+
+// Load more posts
+function load_more_posts() {
+  $page = $_POST['page'];
+
+  // Use the page number to get the next set of posts.
+  $args = array(
+    'post_type'       => 'post',
+    'posts_per_page'  => get_option( 'posts_per_page' ),
+    'paged'           => $page
+  );
+  $query = new WP_Query( $args );
+
+  // Loop through the posts and output them.
+  if ( $query->have_posts() ) {
+    while ( $query->have_posts() ) {
+      $query->the_post();
+      // Output the HTML for each post.
+      // Make sure to use the same HTML structure as your existing posts.
+      echo '<p class="h1">'.the_title().'</p>';
+    }
+  }
+
+  wp_die(); // Always include this at the end of your AJAX function.
+}
+add_action( 'wp_ajax_load_more_posts', 'load_more_posts' );
+add_action( 'wp_ajax_nopriv_load_more_posts', 'load_more_posts' );

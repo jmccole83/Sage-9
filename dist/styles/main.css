@@ -18361,8 +18361,412 @@ textarea.form-control-lg {
 }
 
 .alignfull {
-  margin-left: calc(-50vw + 50%);
-  margin-right: calc(-50vw + 50%);
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+}
+
+.overflow-x-hidden {
+  overflow-x: hidden;
+}
+
+.has-full-height {
+  height: 100vh;
+}
+
+.has-1-height {
+  height: 1vh;
+}
+
+.has-2-height {
+  height: 2vh;
+}
+
+.has-3-height {
+  height: 3vh;
+}
+
+.has-4-height {
+  height: 4vh;
+}
+
+.has-5-height {
+  height: 5vh;
+}
+
+.has-6-height {
+  height: 6vh;
+}
+
+.has-7-height {
+  height: 7vh;
+}
+
+.has-8-height {
+  height: 8vh;
+}
+
+.has-9-height {
+  height: 9vh;
+}
+
+.has-10-height {
+  height: 10vh;
+}
+
+.has-11-height {
+  height: 11vh;
+}
+
+.has-12-height {
+  height: 12vh;
+}
+
+.has-13-height {
+  height: 13vh;
+}
+
+.has-14-height {
+  height: 14vh;
+}
+
+.has-15-height {
+  height: 15vh;
+}
+
+.has-16-height {
+  height: 16vh;
+}
+
+.has-17-height {
+  height: 17vh;
+}
+
+.has-18-height {
+  height: 18vh;
+}
+
+.has-19-height {
+  height: 19vh;
+}
+
+.has-20-height {
+  height: 20vh;
+}
+
+.has-21-height {
+  height: 21vh;
+}
+
+.has-22-height {
+  height: 22vh;
+}
+
+.has-23-height {
+  height: 23vh;
+}
+
+.has-24-height {
+  height: 24vh;
+}
+
+.has-25-height {
+  height: 25vh;
+}
+
+.has-26-height {
+  height: 26vh;
+}
+
+.has-27-height {
+  height: 27vh;
+}
+
+.has-28-height {
+  height: 28vh;
+}
+
+.has-29-height {
+  height: 29vh;
+}
+
+.has-30-height {
+  height: 30vh;
+}
+
+.has-31-height {
+  height: 31vh;
+}
+
+.has-32-height {
+  height: 32vh;
+}
+
+.has-33-height {
+  height: 33vh;
+}
+
+.has-34-height {
+  height: 34vh;
+}
+
+.has-35-height {
+  height: 35vh;
+}
+
+.has-36-height {
+  height: 36vh;
+}
+
+.has-37-height {
+  height: 37vh;
+}
+
+.has-38-height {
+  height: 38vh;
+}
+
+.has-39-height {
+  height: 39vh;
+}
+
+.has-40-height {
+  height: 40vh;
+}
+
+.has-41-height {
+  height: 41vh;
+}
+
+.has-42-height {
+  height: 42vh;
+}
+
+.has-43-height {
+  height: 43vh;
+}
+
+.has-44-height {
+  height: 44vh;
+}
+
+.has-45-height {
+  height: 45vh;
+}
+
+.has-46-height {
+  height: 46vh;
+}
+
+.has-47-height {
+  height: 47vh;
+}
+
+.has-48-height {
+  height: 48vh;
+}
+
+.has-49-height {
+  height: 49vh;
+}
+
+.has-50-height {
+  height: 50vh;
+}
+
+.has-51-height {
+  height: 51vh;
+}
+
+.has-52-height {
+  height: 52vh;
+}
+
+.has-53-height {
+  height: 53vh;
+}
+
+.has-54-height {
+  height: 54vh;
+}
+
+.has-55-height {
+  height: 55vh;
+}
+
+.has-56-height {
+  height: 56vh;
+}
+
+.has-57-height {
+  height: 57vh;
+}
+
+.has-58-height {
+  height: 58vh;
+}
+
+.has-59-height {
+  height: 59vh;
+}
+
+.has-60-height {
+  height: 60vh;
+}
+
+.has-61-height {
+  height: 61vh;
+}
+
+.has-62-height {
+  height: 62vh;
+}
+
+.has-63-height {
+  height: 63vh;
+}
+
+.has-64-height {
+  height: 64vh;
+}
+
+.has-65-height {
+  height: 65vh;
+}
+
+.has-66-height {
+  height: 66vh;
+}
+
+.has-67-height {
+  height: 67vh;
+}
+
+.has-68-height {
+  height: 68vh;
+}
+
+.has-69-height {
+  height: 69vh;
+}
+
+.has-70-height {
+  height: 70vh;
+}
+
+.has-71-height {
+  height: 71vh;
+}
+
+.has-72-height {
+  height: 72vh;
+}
+
+.has-73-height {
+  height: 73vh;
+}
+
+.has-74-height {
+  height: 74vh;
+}
+
+.has-75-height {
+  height: 75vh;
+}
+
+.has-76-height {
+  height: 76vh;
+}
+
+.has-77-height {
+  height: 77vh;
+}
+
+.has-78-height {
+  height: 78vh;
+}
+
+.has-79-height {
+  height: 79vh;
+}
+
+.has-80-height {
+  height: 80vh;
+}
+
+.has-81-height {
+  height: 81vh;
+}
+
+.has-82-height {
+  height: 82vh;
+}
+
+.has-83-height {
+  height: 83vh;
+}
+
+.has-84-height {
+  height: 84vh;
+}
+
+.has-85-height {
+  height: 85vh;
+}
+
+.has-86-height {
+  height: 86vh;
+}
+
+.has-87-height {
+  height: 87vh;
+}
+
+.has-88-height {
+  height: 88vh;
+}
+
+.has-89-height {
+  height: 89vh;
+}
+
+.has-90-height {
+  height: 90vh;
+}
+
+.has-91-height {
+  height: 91vh;
+}
+
+.has-92-height {
+  height: 92vh;
+}
+
+.has-93-height {
+  height: 93vh;
+}
+
+.has-94-height {
+  height: 94vh;
+}
+
+.has-95-height {
+  height: 95vh;
+}
+
+.has-96-height {
+  height: 96vh;
+}
+
+.has-97-height {
+  height: 97vh;
+}
+
+.has-98-height {
+  height: 98vh;
+}
+
+.has-99-height {
+  height: 99vh;
 }
 
 html,
@@ -18469,15 +18873,45 @@ h1, .h1,
   display: block;
 }
 
+header.banner {
+  z-index: 9;
+}
+
 body#tinymce {
   margin: 12px !important;
 }
 
 .video-background {
-  background: grey;
+  z-index: 2;
+  overflow: hidden;
 }
-.video-background.has-full-height {
-  min-height: 100vh;
+.video-background .content {
+  width: 100%;
+  height: 100%;
+}
+.video-background video {
+  position: relative;
+  z-index: -1;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+       -o-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: auto;
+  height: 115vh;
+  pointer-events: none;
+}
+.video-background .ratio {
+  height: 100%;
+  z-index: -1;
+}
+.video-background .ratio > * {
+  top: 50%;
+  left: 50%;
+  width: 150%;
+  height: 100vw;
+  -webkit-transform: translate(-50%, -50%);
+       -o-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 /*# sourceMappingURL=main.css.map*/

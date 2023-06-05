@@ -3,6 +3,12 @@
     "title": "Theme Settings",
     "fields": [
         {
+            "show_column_filter": false,
+            "allow_bulkedit": false,
+            "allow_quickedit": false,
+            "show_column": false,
+            "show_column_weight": 1000,
+            "show_column_sortable": false,
             "key": "field_63718ac8ba59c",
             "label": "Logos",
             "name": "",
@@ -21,6 +27,12 @@
             "endpoint": 0
         },
         {
+            "show_column_filter": false,
+            "allow_bulkedit": false,
+            "allow_quickedit": false,
+            "show_column": false,
+            "show_column_weight": 1000,
+            "show_column_sortable": false,
             "key": "field_63718adaba59d",
             "label": "Logo",
             "name": "logo",
@@ -43,9 +55,17 @@
             "max_height": "",
             "max_size": "",
             "mime_types": "",
-            "preview_size": "medium"
+            "preview_size": "medium",
+            "uploader": "",
+            "acfe_thumbnail": 0
         },
         {
+            "show_column_filter": false,
+            "allow_bulkedit": false,
+            "allow_quickedit": false,
+            "show_column": false,
+            "show_column_weight": 1000,
+            "show_column_sortable": false,
             "key": "field_63718aedba59e",
             "label": "Alternate Logo",
             "name": "alt_logo",
@@ -68,9 +88,17 @@
             "max_height": "",
             "max_size": "",
             "mime_types": "",
-            "preview_size": "medium"
+            "preview_size": "medium",
+            "uploader": "",
+            "acfe_thumbnail": 0
         },
         {
+            "show_column_filter": false,
+            "allow_bulkedit": false,
+            "allow_quickedit": false,
+            "show_column": false,
+            "show_column_weight": 1000,
+            "show_column_sortable": false,
             "key": "field_6381204d294b0",
             "label": "Custom Scripts & Links",
             "name": "",
@@ -89,6 +117,12 @@
             "endpoint": 0
         },
         {
+            "show_column_filter": false,
+            "allow_bulkedit": false,
+            "allow_quickedit": false,
+            "show_column": false,
+            "show_column_weight": 1000,
+            "show_column_sortable": false,
             "key": "field_6381205f294b1",
             "label": "Header Scripts",
             "name": "header_scripts",
@@ -106,9 +140,16 @@
             "maxlength": "",
             "rows": "",
             "placeholder": "",
-            "new_lines": ""
+            "new_lines": "",
+            "acfe_textarea_code": 0
         },
         {
+            "show_column_filter": false,
+            "allow_bulkedit": false,
+            "allow_quickedit": false,
+            "show_column": false,
+            "show_column_weight": 1000,
+            "show_column_sortable": false,
             "key": "field_6381206d294b2",
             "label": "Footer Scripts",
             "name": "footer_scripts",
@@ -126,9 +167,16 @@
             "maxlength": "",
             "rows": "",
             "placeholder": "",
-            "new_lines": ""
+            "new_lines": "",
+            "acfe_textarea_code": 0
         },
         {
+            "show_column_filter": false,
+            "allow_bulkedit": false,
+            "allow_quickedit": false,
+            "show_column": false,
+            "show_column_weight": 1000,
+            "show_column_sortable": false,
             "key": "field_636eedb30b174",
             "label": "Header Style",
             "name": "",
@@ -147,6 +195,12 @@
             "endpoint": 0
         },
         {
+            "show_column_filter": false,
+            "allow_bulkedit": false,
+            "allow_quickedit": false,
+            "show_column": false,
+            "show_column_weight": 1000,
+            "show_column_sortable": false,
             "key": "field_636eedcd0b175",
             "label": "Header Style",
             "name": "header_style",
@@ -172,9 +226,17 @@
             "allow_null": 0,
             "ui": 1,
             "ajax": 1,
-            "placeholder": ""
+            "placeholder": "",
+            "allow_custom": 0,
+            "search_placeholder": ""
         },
         {
+            "show_column_filter": false,
+            "allow_bulkedit": false,
+            "allow_quickedit": false,
+            "show_column": false,
+            "show_column_weight": 1000,
+            "show_column_sortable": false,
             "key": "field_636ebb6af6a53",
             "label": "Hamburger Style",
             "name": "hamburger_style",
@@ -227,9 +289,17 @@
             "allow_null": 0,
             "ui": 1,
             "ajax": 1,
-            "placeholder": ""
+            "placeholder": "",
+            "allow_custom": 0,
+            "search_placeholder": ""
         },
         {
+            "show_column_filter": false,
+            "allow_bulkedit": false,
+            "allow_quickedit": false,
+            "show_column": false,
+            "show_column_weight": 1000,
+            "show_column_sortable": false,
             "key": "field_636ec7cd267fa",
             "label": "Hamburger Breakpoint",
             "name": "hamburger_breakpoint",
@@ -257,15 +327,23 @@
             "allow_null": 0,
             "ui": 1,
             "ajax": 1,
-            "placeholder": ""
+            "placeholder": "",
+            "allow_custom": 0,
+            "search_placeholder": ""
         },
         {
+            "show_column_filter": false,
+            "allow_bulkedit": false,
+            "allow_quickedit": false,
+            "show_column": false,
+            "show_column_weight": 1000,
+            "show_column_sortable": false,
             "key": "field_636ec580a3eb1",
             "label": "Colours",
             "name": "",
             "aria-label": "",
             "type": "accordion",
-            "instructions": "Allows Admins to setup all colours required for Blocks.",
+            "instructions": "Allows Admins to setup all colours required for Gutenberg Blocks.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -278,6 +356,12 @@
             "endpoint": 0
         },
         {
+            "show_column_filter": false,
+            "allow_bulkedit": false,
+            "allow_quickedit": false,
+            "show_column": false,
+            "show_column_weight": 1000,
+            "show_column_sortable": false,
             "key": "field_636ec58ea3eb2",
             "label": "Colours",
             "name": "colours",
@@ -300,6 +384,12 @@
             "rows_per_page": 20,
             "sub_fields": [
                 {
+                    "show_column_filter": false,
+                    "allow_bulkedit": false,
+                    "allow_quickedit": false,
+                    "show_column": false,
+                    "show_column_weight": 1000,
+                    "show_column_sortable": false,
                     "key": "field_636ec59ba3eb3",
                     "label": "Name",
                     "name": "name",
@@ -321,6 +411,12 @@
                     "parent_repeater": "field_636ec58ea3eb2"
                 },
                 {
+                    "show_column_filter": false,
+                    "allow_bulkedit": false,
+                    "allow_quickedit": false,
+                    "show_column": false,
+                    "show_column_weight": 1000,
+                    "show_column_sortable": false,
                     "key": "field_636ec5bba3eb5",
                     "label": "Colour",
                     "name": "colour",
@@ -339,9 +435,16 @@
                     "return_format": "string",
                     "parent_repeater": "field_636ec58ea3eb2"
                 }
-            ]
+            ],
+            "acfe_repeater_stylised_button": 0
         },
         {
+            "show_column_filter": false,
+            "allow_bulkedit": false,
+            "allow_quickedit": false,
+            "show_column": false,
+            "show_column_weight": 1000,
+            "show_column_sortable": false,
             "key": "field_636eb9d069502",
             "label": "Posts",
             "name": "",
@@ -360,6 +463,12 @@
             "endpoint": 0
         },
         {
+            "show_column_filter": false,
+            "allow_bulkedit": false,
+            "allow_quickedit": false,
+            "show_column": false,
+            "show_column_weight": 1000,
+            "show_column_sortable": false,
             "key": "field_636dad82bcd4e",
             "label": "Rename Posts",
             "name": "rename_posts",
@@ -380,6 +489,12 @@
             "ui": 1
         },
         {
+            "show_column_filter": false,
+            "allow_bulkedit": false,
+            "allow_quickedit": false,
+            "show_column": false,
+            "show_column_weight": 1000,
+            "show_column_sortable": false,
             "key": "field_636dad9ae51d6",
             "label": "Posts New Name",
             "name": "posts_new_name",
@@ -408,6 +523,12 @@
             "append": ""
         },
         {
+            "show_column_filter": false,
+            "allow_bulkedit": false,
+            "allow_quickedit": false,
+            "show_column": false,
+            "show_column_weight": 1000,
+            "show_column_sortable": false,
             "key": "field_636db5d872882",
             "label": "Post Singular Name",
             "name": "post_singular_name",
@@ -436,6 +557,12 @@
             "append": ""
         },
         {
+            "show_column_filter": false,
+            "allow_bulkedit": false,
+            "allow_quickedit": false,
+            "show_column": false,
+            "show_column_weight": 1000,
+            "show_column_sortable": false,
             "key": "field_6374e7ac036fa",
             "label": "WooCommerce",
             "name": "",
@@ -454,8 +581,14 @@
             "endpoint": 0
         },
         {
+            "show_column_filter": 0,
+            "allow_bulkedit": 0,
+            "allow_quickedit": 0,
+            "show_column": 0,
+            "show_column_weight": 1000,
+            "show_column_sortable": false,
             "key": "field_6374e7ba036fb",
-            "label": "Use Gutenberg?",
+            "label": "Use Gutenberg? Requires templates to be edited.",
             "name": "use_gutenberg",
             "aria-label": "",
             "type": "true_false",
@@ -467,6 +600,7 @@
                 "class": "",
                 "id": ""
             },
+            "acfe_save_meta": 0,
             "message": "",
             "default_value": 0,
             "ui_on_text": "",
@@ -492,5 +626,12 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1669949206
+    "acfe_display_title": "",
+    "acfe_autosync": [
+        "json"
+    ],
+    "acfe_form": 0,
+    "acfe_meta": "",
+    "acfe_note": "",
+    "modified": 1682450992
 }
