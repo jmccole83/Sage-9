@@ -171,12 +171,14 @@ if( function_exists('acf_add_options_page') ) {
   add_action( 'after_setup_theme', function () {
     // Add custom colours to palette
     $colours = get_field('colours', 'options');
-    foreach($colours as $col) {
-      $name     = esc_attr__($col['name'], 'sage');
-      $slug     = sanitize_title_with_dashes($col['name']);
-      $colour   = $col['colour'];
-      $newColorPalette[] = array('name' => $name, 'slug' => $slug, 'color' => $colour);
-    }
+    if ( $colours ):
+      foreach($colours as $col) {
+        $name     = esc_attr__($col['name'], 'sage');
+        $slug     = sanitize_title_with_dashes($col['name']);
+        $colour   = $col['colour'];
+        $newColorPalette[] = array('name' => $name, 'slug' => $slug, 'color' => $colour);
+      }
+    endif;
     add_theme_support( 'editor-color-palette', $newColorPalette );
 
     // Enable Gutenberg in WooCommerce product
