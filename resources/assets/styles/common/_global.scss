@@ -5,8 +5,8 @@
 }
 
 .alignfull {
-  margin-left: calc(-100vw / 2 + 100% / 2);
-  margin-right: calc(-100vw / 2 + 100% / 2);
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
 }
 
 .alignfull > .wp-block-group__inner-container,
@@ -17,4 +17,21 @@
 // Remove margins
 .wp-block-columns {
   @extend .m-0;
+}
+
+
+// Overflows
+.overflow-x-hidden {
+  overflow-x: hidden;
+}
+
+// Heights
+.has-full-height {
+  height: 100vh;
+}
+
+@for $index from 1 through 99 {
+  .has-#{$index}-height {
+    height: #{$index}vh;
+  }
 }

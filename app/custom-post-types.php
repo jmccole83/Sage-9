@@ -5,6 +5,8 @@ namespace App;
 add_action( 'init', function () {
   // custom post types go here
 
+  if ( function_exists('acf_add_options_page') ) {
+
   // Get Custom Post Type repeater field
   $cpts = get_field('cpts', 'option');
 
@@ -120,5 +122,7 @@ add_action( 'init', function () {
     endif;
   }
   endif;
+
+}
 
 });

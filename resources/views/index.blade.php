@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@php 
+ global $wp_query;
+@endphp
+
 @section('content')
   @include('partials.page-header')
 
@@ -10,9 +14,15 @@
     {!! get_search_form(false) !!}
   @endif
 
-  @while (have_posts()) @php the_post() @endphp
-    @include('partials.content-'.get_post_type())
-  @endwhile
+  <div class="post-list" data-page="<?= get_query_var('paged') ? get_query_var('paged') : 1; ?>" data-max="<?= $wp_query->max_num_pages; ?>" data-per-page="<?=  esc_attr( get_option( 'posts_per_page' ) ); ?>" data-post-type="posts">
+    @while (have_posts()) @php the_post() @endphp
+      @include('partials.content-'.get_post_type())
+    @endwhile
+  </div>
 
-  {!! get_the_posts_navigation() !!}
-@endsection
+  <div class="mb-5">
+    <button class="load-more btn btn-primary rounded">Load More</button>
+  </div>
+
+  {{-- get_the_posts_navigation() --}}
+@endsection 
