@@ -10,62 +10,54 @@ class App extends Controller
      * Primary Nav Menu arguments
      * @return array
      */
-    // public function primarymenu() {
-    //     $hamburger_bp = get_field('hamburger_breakpoint', 'option');
-    //     $menu_bp = ' ';
-    //     switch($hamburger_bp) {
-    //         case 'd-flex':
-    //             $menu_bp = 'd-none';
-    //             break;
-    //         case 'd-xl-flex d-xxl-none':
-    //             $menu_bp = 'd-none d-xxl-flex';
-    //             break;
-    //         case 'd-lg-flex d-xl-none':
-    //             $menu_bp = 'd-none d-xl-flex';
-    //             break;
-    //         case 'd-md-flex d-lg-none':
-    //             $menu_bp = 'd-none d-lg-flex';
-    //             break;
-    //         case 'd-sm-flex d-md-none':
-    //             $menu_bp = 'd-none d-md-flex';
-    //             break;
-    //         case 'd-flex d-sm-none':
-    //             $menu_bp = 'd-none d-sm-flex';
-    //             break;
-    //     }
-    //     $args = array(
-    //         'theme_location'         => 'primary_navigation',
-    //         'menu_class'             => 'navbar-nav',
-    //         'container_class'        => $menu_bp,
-    //         'walker'                 => new \App\wp_bootstrap4_navwalker(),
-    //     );
-    //   return $args;
-    // }
-
     public function primarymenu() {
-      $hamburger_bp = get_field('hamburger_breakpoint', 'option');
-      $menu_bp = ' ';
-      switch($hamburger_bp) {
-          case 'd-flex':
-              $menu_bp = 'd-none';
-              break;
-          case 'd-xl-flex d-xxl-none':
-              $menu_bp = 'd-none d-xxl-flex';
-              break;
-          case 'd-lg-flex d-xl-none':
-              $menu_bp = 'd-none d-xl-flex';
-              break;
-          case 'd-md-flex d-lg-none':
-              $menu_bp = 'd-none d-lg-flex';
-              break;
-          case 'd-sm-flex d-md-none':
-              $menu_bp = 'd-none d-md-flex';
-              break;
-          case 'd-flex d-sm-none':
-              $menu_bp = 'd-none d-sm-flex';
-              break;
-      }
-      return $menu_bp;
+        $hamburger_bp = get_field('hamburger_breakpoint', 'option');
+        $menu_bp = ' ';
+        switch($hamburger_bp) {
+            case 'd-flex':
+                $menu_bp = 'd-none';
+                break;
+            case 'd-xl-flex d-xxl-none':
+                $menu_bp = 'd-none d-xxl-flex';
+                break;
+            case 'd-lg-flex d-xl-none':
+                $menu_bp = 'd-none d-xl-flex';
+                break;
+            case 'd-md-flex d-lg-none':
+                $menu_bp = 'd-none d-lg-flex';
+                break;
+            case 'd-sm-flex d-md-none':
+                $menu_bp = 'd-none d-md-flex';
+                break;
+            case 'd-flex d-sm-none':
+                $menu_bp = 'd-none d-sm-flex';
+                break;
+        }
+        $args = array(
+            'theme_location'         => 'primary_navigation',
+            'menu_class'             => 'navbar-nav flex-row',
+            'container_class'        => $menu_bp,
+            'walker'                 => new \App\wp_bootstrap4_navwalker(),
+        );
+      return $args;
+    }
+
+    public function canvasmenu() {
+      $args = array(
+        'theme_location'         => 'primary_navigation',
+        'menu_class'             => 'navbar-nav',
+        'walker'                 => new \App\wp_bootstrap4_navwalker(),
+      );
+      return $args;
+    }
+
+    public function footermenu() {
+      $args = array(
+        'theme_location'         => 'primary_navigation',
+        'menu_class'             => 'navbar-nav',
+        'walker'                 => new \App\wp_bootstrap4_navwalker(),
+      );
+      return $args;
     }
 
     public function canvasdirection() {

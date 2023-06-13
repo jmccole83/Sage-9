@@ -31,14 +31,14 @@
 }
 
 @for $index from 1 through 100 {
-  .has-#{$index}-height {
+  .vh-#{$index} {
     height: #{$index}vh;
   }
 }
 
 // Widths
 @for $index from 1 to 100 {
-  .has-#{$index}-width {
+  .vw-#{$index} {
     width: #{$index}vw;
   }
 }
