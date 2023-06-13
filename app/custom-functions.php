@@ -2,6 +2,21 @@
 
 namespace App;
 
+/**
+* Filter the upload size limit for administrators.
+*
+* @param string $size Upload size limit (in bytes).
+* @return int (maybe) Filtered size limit.
+*/
+add_filter( 'upload_size_limit', function ( $size ) {
+  // Set the upload size limit to 610 MB for users lacking the 'manage_options' capability.
+  if ( current_user_can( 'manage_options' ) ) {
+  $size = 640000000;
+  }
+  return $size;
+  }, 20 );
+
+
 // Add after theme setup
 add_action( 'after_setup_theme', function () {
   // Add extra Gutenberg alignment
@@ -26,7 +41,7 @@ add_theme_support(
           'name'      => __( 'Small', 'sage' ),
           'shortName' => __( 'S', 'sage' ),
           'size'      => 12,
-          'slug'      => 'Small'
+          'slug'      => 'small'
       ),
       array(
           'name'      => __( 'Body', 'sage' ),
