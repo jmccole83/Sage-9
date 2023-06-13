@@ -11,10 +11,79 @@ namespace App;
 add_filter( 'upload_size_limit', function ( $size ) {
   // Set the upload size limit to 610 MB for users lacking the 'manage_options' capability.
   if ( current_user_can( 'manage_options' ) ) {
-  $size = 640000000;
+    $size = 640000000;
   }
   return $size;
-  }, 20 );
+}, 20 );
+
+
+// Populate select fields with chosen colours
+// from Theme Settings page.
+add_filter('acf/load_field/name=header_bg', function( $field ) {
+
+  // reset choices
+  $field['choices'] = array();
+
+  // if has rows
+  if( have_rows('colours', 'option') ) {
+        
+    // while has rows
+    while( have_rows('colours', 'option') ) {
+        
+        // instantiate row
+        the_row();
+        
+        
+        // vars
+        $value = sanitize_title_with_dashes( get_sub_field('name') );
+        $label = get_sub_field('name');
+
+        
+        // append to choices
+        $field['choices'][ $value ] = $label;
+        
+    }
+    
+}
+
+
+// return the field
+return $field;
+
+});
+
+add_filter('acf/load_field/name=footer_bg', function( $field ) {
+
+  // reset choices
+  $field['choices'] = array();
+
+  // if has rows
+  if( have_rows('colours', 'option') ) {
+        
+    // while has rows
+    while( have_rows('colours', 'option') ) {
+        
+        // instantiate row
+        the_row();
+        
+        
+        // vars
+        $value = sanitize_title_with_dashes( get_sub_field('name') );
+        $label = get_sub_field('name');
+
+        
+        // append to choices
+        $field['choices'][ $value ] = $label;
+        
+    }
+    
+}
+
+
+// return the field
+return $field;
+
+});
 
 
 // Add after theme setup

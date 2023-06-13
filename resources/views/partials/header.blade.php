@@ -1,5 +1,5 @@
 {{-- Off Canvas Navigation --}}
-<div class="offcanvas {!! $canvasdirection !!} {!! $canvaswidth !!} {!! $canvasheight !!}" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+<div class="offcanvas {!! $canvasdirection !!} {!! $canvaswidth !!} {!! $canvasheight !!} {!! $header_bg !!}" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
   <div class="offcanvas-header">
     {{--<h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>--}}
     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -28,7 +28,7 @@
 @endif
 
 {{-- Main header --}}
-<header class="banner py-4 {!! $header_style !!}">
+<header class="banner py-4 {!! $header_style !!} has-1050-z-index {!! $header_bg !!}">
   <div class="container d-flex align-items-center justify-content-between">
     <a class="brand p-4 p-lg-5" href="{{ home_url('/') }}" style="background: url({!! $logo['url'] !!});">
       <span class="visually-hidden">{{ get_bloginfo('name', 'display') }}</span>

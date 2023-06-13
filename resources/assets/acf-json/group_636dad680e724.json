@@ -325,6 +325,52 @@
             "search_placeholder": ""
         },
         {
+            "key": "field_64887218f1af7",
+            "label": "Header Background Colour",
+            "name": "header_bg",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "relevanssi_exclude": 0,
+            "choices": {
+                "white": "White",
+                "black": "Black"
+            },
+            "default_value": false,
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 1,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_64887cc261aa7",
+            "label": "OffCanvas Settings",
+            "name": "",
+            "aria-label": "",
+            "type": "accordion",
+            "instructions": "Settings for the OffCanvas section\/menu.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "relevanssi_exclude": 0,
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
             "key": "field_648845b725678",
             "label": "OffCanvas Direction",
             "name": "offcanvas_direction",
@@ -406,6 +452,52 @@
             "ui_on_text": "Full",
             "ui_off_text": "Flexible",
             "ui": 1
+        },
+        {
+            "key": "field_6488781489437",
+            "label": "Footer Settings",
+            "name": "",
+            "aria-label": "",
+            "type": "accordion",
+            "instructions": "Settings for footer content\/styles.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "relevanssi_exclude": 0,
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_648877e889436",
+            "label": "Footer Background Colour",
+            "name": "footer_bg",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "relevanssi_exclude": 0,
+            "choices": {
+                "white": "White",
+                "black": "Black"
+            },
+            "default_value": false,
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 1,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
         },
         {
             "key": "field_636ec580a3eb1",
@@ -702,5 +794,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1686653985
+    "modified": 1686666527
 }

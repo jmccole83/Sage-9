@@ -100,6 +100,20 @@ class App extends Controller
       return $height;
     }
 
+    public function header_bg() {
+      $bg_color =  get_field('header_bg', 'option');
+      $colour_class = 'has-'.$bg_color.'-background-color';
+
+      return $colour_class;
+    }
+
+    public function footer_bg() {
+      $bg_color =  get_field('footer_bg', 'option');
+      $colour_class = 'has-'.$bg_color.'-background-color';
+
+      return $colour_class;
+    }
+
     public function logo()
     {
       return get_field('logo', 'option');

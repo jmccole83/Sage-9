@@ -15,17 +15,17 @@
 @import "~animate.css/animate.css";
 
 /** Import theme styles */
-@import "common/global";
-@import "common/typography";
-@import "components/buttons";
-@import "components/comments";
-@import "components/forms";
-@import "components/wp-classes";
-@import "components/dropdown";
-@import "layouts/header";
-@import "layouts/sidebar";
-@import "layouts/footer";
-@import "layouts/pages";
-@import "layouts/posts";
-@import "layouts/tinymce";
+@import "common/*";
+// @import "common/typography";
+@import "components/*";
+// @import "components/comments";
+// @import "components/forms";
+// @import "components/wp-classes";
+// @import "components/dropdown";
+@import "layouts/*";
+// @import "layouts/sidebar";
+// @import "layouts/footer";
+// @import "layouts/pages";
+// @import "layouts/posts";
+// @import "layouts/tinymce";
 @import "blocks/*";

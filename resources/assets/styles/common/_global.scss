@@ -30,8 +30,22 @@
   height: 100vh;
 }
 
-@for $index from 1 through 99 {
+@for $index from 1 through 100 {
   .has-#{$index}-height {
     height: #{$index}vh;
+  }
+}
+
+// Widths
+@for $index from 1 to 100 {
+  .has-#{$index}-width {
+    width: #{$index}vw;
+  }
+}
+
+// Z-indexes
+@for $index from -2 through 9999 {
+  .has-#{$index}-z-index {
+    z-index: #{$index} !important;
   }
 }
