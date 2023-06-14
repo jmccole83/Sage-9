@@ -118,6 +118,17 @@ return $field;
 
 });
 
+// Populate Masonry block post Select with post types.
+add_filter('acf/load_field/name=post_type', function ($field)
+  {
+      foreach ( get_post_types( '', 'names' ) as $post_type ) {
+        $field['choices'][$post_type] = $post_type;
+      }
+
+      // return the field
+      return $field;
+  }
+);
 
 // Add after theme setup
 add_action( 'after_setup_theme', function () {

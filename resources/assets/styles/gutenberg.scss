@@ -28,3 +28,10 @@
 @import "layouts/posts";
 @import "layouts/tinymce";
 @import "blocks/*";
+
+.acf-block-preview {
+    > div {
+        max-width: 100%;
+        margin: 0 !important;
+    }
+}

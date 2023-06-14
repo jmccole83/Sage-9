@@ -18382,8 +18382,8 @@ textarea.form-control-lg {
 }
 
 .alignfull {
-  margin-left: calc(50% - 50vw);
-  margin-right: calc(50% - 50vw);
+  margin-left: calc(50% - 49.55vw);
+  margin-right: calc(50% - 49.55vw);
 }
 
 .overflow-x-hidden {
@@ -59333,13 +59333,15 @@ header.banner {
   z-index: 9;
 }
 
-[data-id=post-list] .post {
-  width: 33%;
-  margin: 0;
-}
-
 body#tinymce {
   margin: 12px !important;
+}
+
+.masonry {
+  min-height: 90vh;
+}
+.masonry .post {
+  width: 33%;
 }
 
 .video-background {
