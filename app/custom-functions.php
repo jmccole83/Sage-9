@@ -85,6 +85,39 @@ return $field;
 
 });
 
+add_filter('acf/load_field/name=hamburger_bg', function( $field ) {
+
+  // reset choices
+  $field['choices'] = array();
+
+  // if has rows
+  if( have_rows('colours', 'option') ) {
+        
+    // while has rows
+    while( have_rows('colours', 'option') ) {
+        
+        // instantiate row
+        the_row();
+        
+        
+        // vars
+        $value = sanitize_title_with_dashes( get_sub_field('name') );
+        $label = get_sub_field('name');
+
+        
+        // append to choices
+        $field['choices'][ $value ] = $label;
+        
+    }
+    
+}
+
+
+// return the field
+return $field;
+
+});
+
 
 // Add after theme setup
 add_action( 'after_setup_theme', function () {

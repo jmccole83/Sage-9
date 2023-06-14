@@ -8,13 +8,25 @@ $theme-colors: (
 // Brand colours
 $white: #efefef;
 $black: #1c1b1b;
-$green: #172627;
 
 $colours: (
   white: $white,
   black: $black,
-  green: $green,
 );
+
+/*
+ * Generate background and
+ * text colour classes. Same
+ * classes used in Gutenberg blocks.
+ */
+ @each $name, $colour in $colours {
+  .has-#{$name}-background-color {
+    background-color: $colour !important;
+  }
+  .has-#{$name}-color {
+    color: $colour !important;
+  }
+}
 
 // Font(s)
 $fa:           "Font Awesome 5 Pro";

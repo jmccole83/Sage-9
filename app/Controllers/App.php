@@ -99,6 +99,13 @@ class App extends Controller
       return $colour_class;
     }
 
+    public function hamburger_bg() {
+      $color =  get_field('hamburger_bg', 'option');
+      $colour_class = 'has-'.$color.'-background-color';
+
+      return $colour_class;
+    }
+
     public function footer_bg() {
       $bg_color =  get_field('footer_bg', 'option');
       $colour_class = 'has-'.$bg_color.'-background-color';

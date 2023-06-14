@@ -5,18 +5,11 @@
     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
   <div class="offcanvas-body container">
-    <nav class="nav-primary d-flex align-items-end justify-content-start vh-80">
+    <nav class="nav-primary d-flex align-items-end justify-content-start vh-80" role="navigation">
       @if (has_nav_menu('primary_navigation'))
         {!! wp_nav_menu($canvasmenu) !!}
       @endif
     </nav>
-
-    {{--
-    <form class="d-flex mt-3" role="search">
-      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success" type="submit">Search</button>
-    </form>
-    --}}
   </div>
 </div>
 
@@ -27,19 +20,19 @@
 </a>
 @endif
 
-{{-- Main header --}}
+{{-- Main Header --}}
 <header class="banner py-4 {!! $header_style !!} has-1050-z-index {!! $header_bg !!}">
   <div class="container d-flex align-items-center justify-content-between">
     <a class="brand p-3" href="{{ home_url('/') }}" style="background: url({!! $logo['url'] !!});">
       <span class="visually-hidden">{{ get_bloginfo('name', 'display') }}</span>
     </a>
-    <nav class="navbar navbar-expanded-xxl align-items-center justify-content-end">
+    <nav class="navbar align-items-center justify-content-end" role="navigation">
       @if (has_nav_menu('primary_navigation'))
         {!! wp_nav_menu($primarymenu) !!}
       @endif
       <button class="navbar-toggler hamburger p-0 {!! $hamburger_style !!} {!! $hamburger_breakpoint !!} " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
         <span class="hamburger-box">
-          <span class="hamburger-inner"></span>
+          <span class="hamburger-inner {!! $hamburger_bg !!}"></span>
         </span>
       </button>
     </nav>
