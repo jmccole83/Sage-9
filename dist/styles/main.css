@@ -59205,6 +59205,7 @@ textarea.form-control-lg {
 html,
 body {
   font-size: 16px;
+  font-family: "Basel Grotesk";
 }
 
 .small,
@@ -59249,6 +59250,37 @@ h1, .h1,
 
 .has-display-font-size {
   font-size: 4.786rem;
+  font-family: "Gustavo Regular";
+}
+
+h1, .h1,
+.has-h-1-font-size {
+  font-family: "Gustavo Regular";
+}
+
+h2, .h2,
+.has-h-2-font-size {
+  font-family: "Gustavo Regular";
+}
+
+h3, .h3,
+.has-h-3-font-size {
+  font-family: "Gustavo Regular";
+}
+
+h4, .h4,
+.has-h-4-font-size {
+  font-family: "Gustavo Regular";
+}
+
+h5, .h5,
+.has-h-5-font-size {
+  font-family: "Gustavo Regular";
+}
+
+h6, .h6,
+.has-h-6-font-size {
+  font-family: "Gustavo Regular";
 }
 
 /** Import Bootstrap functions */

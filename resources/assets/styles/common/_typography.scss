@@ -1,6 +1,10 @@
+$primary: 'Basel Grotesk';
+$secondary: 'Gustavo Regular';
+
 html,
 body {
   font-size: 16px;
+  font-family: $primary;
 }
 
 .small,
@@ -45,4 +49,12 @@ h1,
 
 .has-display-font-size {
   font-size: 4.786rem;
+  font-family: $secondary;
+}
+
+@for $index from 1 through 6 {
+  h#{$index},
+  .has-h-#{$index}-font-size{
+    font-family: $secondary;
+  }
 }
